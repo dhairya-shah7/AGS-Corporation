@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AGS Corporation | Institutional Wealth & Treasury Operating System</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        gold: {
+                            50: '#FAF8F0',
+                            100: '#F4EED7',
+                            200: '#E7D9A5',
+                            300: '#DAC474',
+                            400: '#CEB24B',
+                            500: '#C5A059',
+                            600: '#B0883A',
+                            700: '#8C6724',
+                            800: '#644714',
+                            900: '#3D2A08',
+                        },
+                        onyx: {
+                            900: '#0B0D10',
+                            800: '#14171E',
+                            700: '#1F242F',
+                        },
+                        pearl: '#FAFBFD',
+                        platinum: '#F1F3F7'
+                    },
+                    fontFamily: {
+                        serif: ['Cinzel', 'serif'],
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    },
+                    boxShadow: {
+                        'luxury': '0 20px 45px -15px rgba(197, 160, 89, 0.15), 0 10px 25px -10px rgba(0, 0, 0, 0.04)',
+                        'card-hover': '0 25px 50px -12px rgba(197, 160, 89, 0.22)',
+                        'inner-glow': 'inset 0 1px 1px 0 rgba(255, 255, 255, 0.9), inset 0 -1px 1px 0 rgba(197, 160, 89, 0.2)',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #B0883A 0%, #D4AF37 40%, #8C6724 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .gold-gradient-bg {
+            background: linear-gradient(135deg, #C5A059 0%, #DFBA73 50%, #B0883A 100%);
+        }
+        .luxury-mesh {
+            background-color: #ffffff;
+            background-image: 
+                radial-gradient(at 10% 15%, rgba(197, 160, 89, 0.06) 0px, transparent 55%),
+                radial-gradient(at 90% 10%, rgba(223, 186, 115, 0.08) 0px, transparent 50%),
+                radial-gradient(at 50% 50%, rgba(247, 243, 233, 0.5) 0px, transparent 65%),
+                radial-gradient(at 80% 90%, rgba(197, 160, 89, 0.05) 0px, transparent 50%);
+        }
+        .card-glare {
+            background: linear-gradient(135deg, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0.2) 100%);
+        }
+        .metallic-chip {
+            background: linear-gradient(135deg, #e0be75 0%, #f6e6b4 30%, #b89047 70%, #d8b461 100%);
+        }
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #FAFAFA;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #D4AF37;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body class="bg-[#FCFCFD] text-slate-800 font-sans selection:bg-gold-500/20 selection:text-gold-800">
+
+    <!-- Top Luxury Dispatch Bar -->
+    <div class="border-b border-gold-200/40 bg-white/90 backdrop-blur-md text-[11px] tracking-widest uppercase text-slate-600 py-2 px-4">
+        <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-2">
+            <div class="flex items-center gap-3">
+                <span class="inline-block w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                <span class="font-medium text-slate-900 tracking-wider">AGS PRIVATE LIQUIDITY DESK</span>
+                <span class="text-gold-600 font-semibold">• TIER-1 INSTITUTIONAL CLEARING LIVE</span>
+            </div>
+            <div class="hidden md:flex items-center gap-6 text-[10px]">
+                <span>LONDON: 09:54 BST</span>
+                <span>ZURICH: 10:54 CEST</span>
+                <span>NEW YORK: 04:54 EDT</span>
+                <span>SINGAPORE: 16:54 SGT</span>
+                <span class="text-gold-700 font-semibold">GLOBAL ROUTING: SECURE 256-BIT</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation Header -->
+    <header class="sticky top-0 z-50 bg-white/80 backdrop-blur-xl border-b border-slate-100 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <!-- Brand Logo -->
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="w-11 h-11 rounded-lg border border-gold-400/50 bg-gradient-to-br from-gold-50 via-white to-gold-100 flex items-center justify-center shadow-sm group-hover:shadow-md transition">
+                    <span class="font-serif font-bold text-lg gold-gradient-text tracking-wider">AGS</span>
+                </div>
+                <div>
+                    <span class="font-serif text-lg font-bold tracking-[0.2em] text-slate-900 block leading-tight">AGS CORPORATION</span>
+                    <span class="text-[9px] uppercase tracking-[0.3em] text-gold-600 font-semibold block">Private Capital & Wealth</span>
+                </div>
+            </a>
+
+            <!-- Desktop Links -->
+            <nav class="hidden lg:flex items-center gap-8 text-sm font-medium text-slate-600">
+                <a href="#solutions" class="hover:text-gold-600 transition tracking-wide">Institutional Wealth</a>
+                <a href="#treasury" class="hover:text-gold-600 transition tracking-wide">Treasury Suite</a>
+                <a href="#cards" class="hover:text-gold-600 transition tracking-wide">Sovereign Card</a>
+                <a href="#simulator" class="hover:text-gold-600 transition tracking-wide">Yield Model</a>
+                <a href="#governance" class="hover:text-gold-600 transition tracking-wide">Compliance & Trust</a>
+            </nav>
+
+            <!-- Actions -->
+            <div class="flex items-center gap-4">
+                <button onclick="openPortalModal()" class="hidden sm:inline-flex text-xs uppercase tracking-wider font-semibold text-slate-700 hover:text-gold-600 transition py-2 px-3">
+                    Client Portal
+                </button>
+                <button onclick="openContactModal()" class="relative inline-flex items-center justify-center px-6 py-2.5 text-xs font-semibold uppercase tracking-widest text-slate-950 transition overflow-hidden rounded-full shadow-md group bg-gradient-to-r from-gold-300 via-gold-400 to-gold-500 hover:shadow-gold-500/30 hover:scale-[1.02]">
+                    <span class="relative z-10 font-bold">Request Private Access</span>
+                    <div class="absolute inset-0 bg-white/20 opacity-0 group-hover:opacity-100 transition duration-300"></div>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="luxury-mesh relative pt-16 pb-24 lg:pt-24 lg:pb-32 overflow-hidden border-b border-slate-100">
+        <!-- Decorative ambient lights -->
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-gradient-to-r from-gold-200/20 via-gold-100/30 to-amber-100/20 blur-3xl -z-10 rounded-full pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                <!-- Hero Left Copy -->
+                <div class="lg:col-span-7 space-y-8">
+                    <!-- Pill Tag -->
+                    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-gold-300/60 bg-gold-50/70 text-gold-800 text-xs font-semibold uppercase tracking-widest">
+                        <svg class="w-3.5 h-3.5 text-gold-600" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                        </svg>
+                        <span>Sovereign Wealth & Private Family Office Infrastructure</span>
+                    </div>
+
+                    <!-- Headline -->
+                    <div class="space-y-3">
+                        <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-950 tracking-tight leading-[1.12]">
+                            Architecting Capital. <br>
+                            <span class="gold-gradient-text">Preserving Empires.</span>
+                        </h1>
+                        <p class="text-lg sm:text-xl text-slate-600 font-light max-w-2xl leading-relaxed pt-2">
+                            AGS Corporation unifies algorithmic global treasury management, discretionary multi-asset custody, and private credit corridors into an ultra-secure white-glove operating system.
+                        </p>
+                    </div>
+
+                    <!-- Key Metrics Strip -->
+                    <div class="grid grid-cols-3 gap-6 pt-2 pb-2 border-y border-slate-200/60 max-w-xl">
+                        <div>
+                            <span class="block font-serif text-2xl sm:text-3xl font-bold text-slate-900">$18.4B+</span>
+                            <span class="text-[11px] uppercase tracking-wider text-slate-500 font-medium">Assets Under Routing</span>
+                        </div>
+                        <div>
+                            <span class="block font-serif text-2xl sm:text-3xl font-bold text-slate-900">42</span>
+                            <span class="text-[11px] uppercase tracking-wider text-slate-500 font-medium">Jurisdictions Cleared</span>
+                        </div>
+                        <div>
+                            <span class="block font-serif text-2xl sm:text-3xl font-bold text-gold-600">0.00%</span>
+                            <span class="text-[11px] uppercase tracking-wider text-slate-500 font-medium">Custodial Breaches</span>
+                        </div>
+                    </div>
+
+                    <!-- CTA Buttons -->
+                    <div class="flex flex-wrap items-center gap-4 pt-2">
+                        <button onclick="openContactModal()" class="px-8 py-4 rounded-xl gold-gradient-bg text-slate-950 font-bold text-sm tracking-wider uppercase shadow-luxury hover:shadow-card-hover hover:-translate-y-0.5 transition duration-200 flex items-center gap-3">
+                            <span>Open Institutional Account</span>
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                        </button>
+                        <a href="#simulator" class="px-7 py-4 rounded-xl bg-white border border-gold-300 text-slate-800 font-semibold text-sm tracking-wider uppercase hover:bg-gold-50/50 hover:border-gold-500 transition duration-200 shadow-sm flex items-center gap-2">
+                            <span>Test Yield Simulator</span>
+                            <svg class="w-4 h-4 text-gold-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+                        </a>
+                    </div>
+
+                    <!-- Reassurance badges -->
+                    <div class="flex items-center gap-6 text-xs text-slate-500 pt-2">
+                        <div class="flex items-center gap-2">
+                            <svg class="w-4 h-4 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                            <span>SEC & FINRA Regulated Custody</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <svg class="w-4 h-4 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                            <span>Swiss Cold-Vault Architecture</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hero Right: Luxury Glassmorphic Terminal Card -->
+                <div class="lg:col-span-5 relative">
+                    <!-- Glow behind card -->
+                    <div class="absolute -inset-2 bg-gradient-to-r from-gold-300 to-amber-200 rounded-3xl blur-2xl opacity-40 -z-10"></div>
+
+                    <!-- Main Luxury Dashboard Mockup -->
+                    <div class="bg-white/95 rounded-2xl border border-gold-200/70 p-6 sm:p-7 shadow-2xl relative overflow-hidden backdrop-blur-xl">
+                        <!-- Top status bar -->
+                        <div class="flex justify-between items-center pb-5 border-b border-slate-100">
+                            <div class="flex items-center gap-3">
+                                <div class="w-3 h-3 rounded-full bg-gold-400"></div>
+                                <span class="text-xs uppercase font-serif tracking-widest font-bold text-slate-800">AGS SOVEREIGN TERMINAL</span>
+                            </div>
+                            <span class="text-[10px] font-mono bg-emerald-50 text-emerald-700 px-2.5 py-1 rounded-full font-semibold border border-emerald-200/60">LIVE VAULT AUDIT</span>
+                        </div>
+
+                        <!-- Balance display -->
+                        <div class="py-5">
+                            <span class="text-xs font-semibold uppercase tracking-wider text-slate-400">Total Consolidated Liquidity</span>
+                            <div class="flex items-baseline gap-2 mt-1">
+                                <span class="font-serif text-3xl sm:text-4xl font-extrabold text-slate-900">$84,920,410.00</span>
+                                <span class="text-xs font-bold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded">+14.2% YTD</span>
+                            </div>
+                            <span class="text-xs text-slate-400 mt-0.5 block">Allocated across Zurich, London & Singapore Nodes</span>
+                        </div>
+
+                        <!-- Miniature Graphic Representation -->
+                        <div class="bg-slate-50 rounded-xl p-4 border border-slate-100 my-2">
+                            <div class="flex justify-between text-xs font-semibold mb-2 text-slate-600">
+                                <span>Yield Performance (Aggregated)</span>
+                                <span class="text-gold-700 font-mono">8.42% Net APY</span>
+                            </div>
+                            <!-- SVG Line Graph -->
+                            <div class="h-20 w-full">
+                                <svg class="w-full h-full overflow-visible" viewBox="0 0 300 80" fill="none">
+                                    <defs>
+                                        <linearGradient id="agsGradient" x1="0" y1="0" x2="0" y2="1">
+                                            <stop offset="0%" stop-color="#C5A059" stop-opacity="0.3"/>
+                                            <stop offset="100%" stop-color="#C5A059" stop-opacity="0"/>
+                                        </linearGradient>
+                                    </defs>
+                                    <path d="M0 65 Q 40 50, 80 55 T 160 30 T 240 22 T 300 10 L 300 80 L 0 80 Z" fill="url(#agsGradient)" />
+                                    <path d="M0 65 Q 40 50, 80 55 T 160 30 T 240 22 T 300 10" stroke="#B0883A" stroke-width="2.5" stroke-linecap="round" />
+                                    <circle cx="300" cy="10" r="4" fill="#B0883A" />
+                                </svg>
+                            </div>
+                        </div>
+
+                        <!-- Asset allocation breakdown -->
+                        <div class="space-y-3 pt-3">
+                            <div class="text-xs font-semibold uppercase tracking-wider text-slate-400">Vault Segregation</div>
+                            <div class="space-y-2 text-xs">
+                                <div class="flex justify-between items-center bg-white p-2.5 rounded-lg border border-slate-100 shadow-sm">
+                                    <div class="flex items-center gap-2">
+                                        <div class="w-2 h-2 rounded-full bg-gold-500"></div>
+                                        <span class="font-medium text-slate-800">Sovereign Treasury Bills & Notes</span>
+                                    </div>
+                                    <span class="font-mono font-semibold text-slate-900">$48,200,000</span>
+                                </div>
+                                <div class="flex justify-between items-center bg-white p-2.5 rounded-lg border border-slate-100 shadow-sm">
+                                    <div class="flex items-center gap-2">
+                                        <div class="w-2 h-2 rounded-full bg-slate-900"></div>
+                                        <span class="font-medium text-slate-800">Physical Allocated Gold (Swiss Bullion)</span>
+                                    </div>
+                                    <span class="font-mono font-semibold text-slate-900">$22,450,000</span>
+                                </div>
+                                <div class="flex justify-between items-center bg-white p-2.5 rounded-lg border border-slate-100 shadow-sm">
+                                    <div class="flex items-center gap-2">
+                                        <div class="w-2 h-2 rounded-full bg-emerald-500"></div>
+                                        <span class="font-medium text-slate-800">Private Credit & Algorithmic Arbitrage</span>
+                                    </div>
+                                    <span class="font-mono font-semibold text-slate-900">$14,270,410</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card preview mini footer -->
+                        <div class="mt-5 pt-4 border-t border-slate-100 flex items-center justify-between">
+                            <div class="flex items-center gap-2">
+                                <div class="w-6 h-6 rounded-full gold-gradient-bg flex items-center justify-center text-[10px] font-bold text-slate-950">✓</div>
+                                <span class="text-[11px] text-slate-500 font-medium">Bespoke Concierge Assigned</span>
+                            </div>
+                            <span class="text-[11px] font-serif font-bold text-gold-700">MEMBERSHIP: SOVEREIGN</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Institutional Partners / Trust Ticker -->
+    <section class="py-12 bg-white border-b border-slate-200/60">
+        <div class="max-w-7xl mx-auto px-6">
+            <p class="text-center text-[11px] uppercase tracking-[0.3em] font-semibold text-slate-400 mb-8">
+                Interfacing With Premier Global Custodians, Clearing Houses & Exchanges
+            </p>
+            <div class="flex flex-wrap justify-center items-center gap-10 md:gap-16 opacity-75 grayscale hover:grayscale-0 transition duration-300">
+                <div class="font-serif tracking-widest text-lg font-bold text-slate-700">ZURICH VAULT CUSTODY</div>
+                <div class="font-serif tracking-widest text-lg font-bold text-slate-700">LOMBARD LIQUIDITY CORP</div>
+                <div class="font-serif tracking-widest text-lg font-bold text-slate-700">GENEVA PRIVATE ASSETS</div>
+                <div class="font-serif tracking-widest text-lg font-bold text-slate-700">ROYAL BANK CLEARING</div>
+                <div class="font-serif tracking-widest text-lg font-bold text-slate-700">APEX ASSET HORIZON</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Solutions Grid -->
+    <section id="solutions" class="py-24 bg-pearl border-b border-slate-200/60">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                <span class="text-xs uppercase tracking-[0.3em] font-bold text-gold-600 block">The AGS Architecture</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-extrabold text-slate-900">
+                    Engineered for Exceptional Capital Requirements
+                </h2>
+                <p class="text-slate-600 font-light text-base sm:text-lg">
+                    Traditional banking fragments your assets across slow intermediaries. AGS Corporation unites everything into a singular institutional command plane.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="bg-white rounded-2xl p-8 border border-slate-200/80 hover:border-gold-300 shadow-sm hover:shadow-card-hover hover:-translate-y-1 transition duration-300 group">
+                    <div class="w-14 h-14 rounded-xl bg-gold-50 border border-gold-200 flex items-center justify-center mb-6 group-hover:bg-gold-500 group-hover:text-white transition duration-300 text-gold-600">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                    </div>
+                    <h3 class="font-serif text-xl font-bold text-slate-900 mb-3">Multi-Currency Global Treasury</h3>
+                    <p class="text-sm text-slate-600 leading-relaxed mb-6">
+                        Seamlessly hold, convert, and wire across 54 sovereign currencies with sub-second SWIFT gpi & instant real-time gross settlement (RTGS).
+                    </p>
+                    <ul class="space-y-2 text-xs text-slate-500 font-medium">
+                        <li class="flex items-center gap-2">
+                            <span class="text-gold-600">✦</span> Direct central bank liquidity rails
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <span class="text-gold-600">✦</span> Automated FX slippage mitigation
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <span class="text-gold-600">✦</span> No restrictive daily transfer thresholds
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-white rounded-2xl p-8 border border-slate-200/80 hover:border-gold-300 shadow-sm hover:shadow-card-hover hover:-translate-y-1 transition duration-300 group">
+                    <div class="w-14 h-14 rounded-xl bg-gold-50 border border-gold-200 flex items-center justify-center mb-6 group-hover:bg-gold-500 group-hover:text-white transition duration-300 text-gold-600">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+                    </div>
+                    <h3 class="font-serif text-xl font-bold text-slate-900 mb-3">Bankruptcy-Remote Segregated Custody</h3>
+                    <p class="text-sm text-slate-600 leading-relaxed mb-6">
+                        Your capital never touches a commercial bank's risky balance sheet. Assets reside in 100% off-balance-sheet statutory bankruptcy-protected trusts.
+                    </p>
+                    <ul class="space-y-2 text-xs text-slate-500 font-medium">
+                        <li class="flex items-center gap-2">
+                            <span class="text-gold-600">✦</span> Lloyd's of London syndicated insurance
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <span class="text-gold-600">✦</span> Hardware Security Module (HSM) multi-signature
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <span class="text-gold-600">✦</span> Daily independent third-party attestations
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-white rounded-2xl p-8 border border-slate-200/80 hover:border-gold-300 shadow-sm hover:shadow-card-hover hover:-translate-y-1 transition duration-300 group">
+                    <div class="w-14 h-14 rounded-xl bg-gold-50 border border-gold-200 flex items-center justify-center mb-6 group-hover:bg-gold-500 group-hover:text-white transition duration-300 text-gold-600">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                    </div>
+                    <h3 class="font-serif text-xl font-bold text-slate-900 mb-3">Algorithmic Yield & Private Debt</h3>
+                    <p class="text-sm text-slate-600 leading-relaxed mb-6">
+                        Put idle institutional cash balances to work. Deploy directly into collateralized asset-backed notes, reverse repos, and prime money markets.
+                    </p>
+                    <ul class="space-y-2 text-xs text-slate-500 font-medium">
+                        <li class="flex items-center gap-2">
+                            <span class="text-gold-600">✦</span> Automated sweep accounts with daily compounding
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <span class="text-gold-600">✦</span> Real-time liquidity without lockup penalties
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <span class="text-gold-600">✦</span> Customized risk-adjusted yield profiles
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The AGS Sovereign Metal Card Showcase -->
+    <section id="cards" class="py-24 bg-white border-b border-slate-200/60 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                <!-- Card Visual Mockup -->
+                <div class="lg:col-span-6 flex justify-center order-2 lg:order-1">
+                    <div class="relative w-full max-w-md perspective-1000 group">
+                        <!-- Card background shadow glow -->
+                        <div class="absolute -inset-4 bg-gradient-to-r from-gold-400 via-amber-300 to-yellow-500 rounded-3xl blur-xl opacity-25 group-hover:opacity-40 transition duration-500"></div>
+
+                        <!-- 28g Solid Titanium Physical Card Simulation -->
+                        <div class="relative aspect-[1.586/1] w-full rounded-2xl bg-gradient-to-br from-slate-900 via-onyx-800 to-black p-8 text-white shadow-2xl border border-gold-400/40 flex flex-col justify-between overflow-hidden transition-transform duration-500 group-hover:rotate-1 group-hover:scale-105">
+                            <!-- Brushed metal luster effect -->
+                            <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-white/10 via-transparent to-transparent pointer-events-none"></div>
+                            <div class="absolute -right-20 -bottom-20 w-64 h-64 border border-gold-400/10 rounded-full pointer-events-none"></div>
+
+                            <!-- Card Header -->
+                            <div class="flex justify-between items-start z-10">
+                                <div>
+                                    <span class="font-serif tracking-[0.25em] text-sm text-gold-300 font-bold block">AGS CORPORATION</span>
+                                    <span class="text-[9px] uppercase tracking-widest text-slate-400">SOVEREIGN RESERVE</span>
+                                </div>
+                                <div class="w-12 h-9 rounded-md metallic-chip border border-gold-200 shadow-inner flex items-center justify-center">
+                                    <div class="w-8 h-5 border border-amber-900/40 rounded-sm"></div>
+                                </div>
+                            </div>
+
+                            <!-- Card Number Mockup -->
+                            <div class="z-10 my-auto">
+                                <span class="font-mono tracking-[0.22em] text-lg sm:text-xl text-slate-200 drop-shadow">4920 •••• •••• 8802</span>
+                            </div>
+
+                            <!-- Card Footer -->
+                            <div class="flex justify-between items-end z-10">
+                                <div>
+                                    <span class="text-[8px] uppercase tracking-widest text-gold-400/80 block">AUTHORIZED MEMBER</span>
+                                    <span class="font-serif tracking-widest text-xs font-semibold text-white">V. STERLING CHEN</span>
+                                </div>
+                                <div class="text-right">
+                                    <span class="text-[8px] uppercase tracking-widest text-slate-400 block">TIER</span>
+                                    <span class="font-serif tracking-widest text-xs font-bold text-gold-400">OBSIDIAN 28G</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card Details Copy -->
+                <div class="lg:col-span-6 space-y-6 order-1 lg:order-2">
+                    <span class="text-xs uppercase tracking-[0.3em] font-bold text-gold-600 block">Unrestricted Global Liquidity</span>
+                    <h2 class="font-serif text-3xl sm:text-4xl font-extrabold text-slate-900 leading-tight">
+                        The AGS Sovereign Card: Crafted in 28g Solid Titanium
+                    </h2>
+                    <p class="text-slate-600 text-base leading-relaxed">
+                        Engineered for principals who refuse arbitrary transaction limits. Direct access to your multi-asset liquidity pool anywhere Mastercard® and private banking terminals are accepted.
+                    </p>
+
+                    <div class="grid grid-cols-2 gap-4 pt-2">
+                        <div class="border border-slate-200 rounded-xl p-4 bg-pearl">
+                            <span class="font-serif font-bold text-slate-900 text-lg block">$1,000,000</span>
+                            <span class="text-xs text-slate-500">Daily ATM & Wire Ceiling</span>
+                        </div>
+                        <div class="border border-slate-200 rounded-xl p-4 bg-pearl">
+                            <span class="font-serif font-bold text-slate-900 text-lg block">0% FX Fees</span>
+                            <span class="text-xs text-slate-500">Institutional Interbank Rate</span>
+                        </div>
+                        <div class="border border-slate-200 rounded-xl p-4 bg-pearl">
+                            <span class="font-serif font-bold text-slate-900 text-lg block">24/7 Dedicated</span>
+                            <span class="text-xs text-slate-500">Private Client Attaché</span>
+                        </div>
+                        <div class="border border-slate-200 rounded-xl p-4 bg-pearl">
+                            <span class="font-serif font-bold text-slate-900 text-lg block">Worldwide</span>
+                            <span class="text-xs text-slate-500">Private Aviation & Marine Concierge</span>
+                        </div>
+                    </div>
+
+                    <div class="pt-2">
+                        <button onclick="openContactModal()" class="px-6 py-3 rounded-lg border border-gold-400 text-gold-800 bg-gold-50/60 hover:bg-gold-100 font-semibold text-xs uppercase tracking-wider transition">
+                            Inquire for Card Allocation
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Yield & Liquidity Calculator -->
+    <section id="simulator" class="py-24 bg-pearl border-b border-slate-200/60">
+        <div class="max-w-5xl mx-auto px-6">
+            <div class="text-center mb-12 space-y-3">
+                <span class="text-xs uppercase tracking-[0.3em] font-bold text-gold-600 block">Dynamic Capital Allocation</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-extrabold text-slate-900">
+                    Institutional Yield Model Simulator
+                </h2>
+                <p class="text-slate-600 text-sm max-w-xl mx-auto">
+                    Adjust your deployable treasury capital to calculate estimated annualized returns through AGS algorithmic liquidity routing.
+                </p>
+            </div>
+
+            <div class="bg-white rounded-3xl border border-gold-200/80 p-8 sm:p-12 shadow-luxury">
+                <div class="grid md:grid-cols-12 gap-8 items-center">
+                    <!-- Left Slider Controls -->
+                    <div class="md:col-span-7 space-y-8">
+                        <div>
+                            <div class="flex justify-between items-center mb-2">
+                                <label class="text-xs uppercase tracking-wider font-bold text-slate-700">Deployable Capital (USD)</label>
+                                <span id="capitalDisplay" class="font-serif text-2xl font-bold text-gold-700">$5,000,000</span>
+                            </div>
+                            <input id="capitalSlider" type="range" min="1000000" max="50000000" step="500000" value="5000000" class="w-full h-2.5 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-gold-500">
+                            <div class="flex justify-between text-[11px] text-slate-400 mt-2 font-mono">
+                                <span>$1,000,000</span>
+                                <span>$25,000,000</span>
+                                <span>$50,000,000+</span>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="flex justify-between items-center mb-2">
+                                <label class="text-xs uppercase tracking-wider font-bold text-slate-700">Strategy Risk Tolerance</label>
+                                <span id="strategyDisplay" class="text-xs font-semibold text-slate-800 bg-slate-100 px-3 py-1 rounded-full">Sovereign Prime (5.8% APY)</span>
+                            </div>
+                            <div class="grid grid-cols-3 gap-3">
+                                <button onclick="setStrategy(1)" id="strat1" class="strategy-btn py-2.5 px-2 text-xs font-semibold rounded-lg border border-gold-500 bg-gold-50 text-gold-900 transition">
+                                    Sovereign Prime
+                                </button>
+                                <button onclick="setStrategy(2)" id="strat2" class="strategy-btn py-2.5 px-2 text-xs font-semibold rounded-lg border border-slate-200 bg-white text-slate-600 hover:border-gold-300 transition">
+                                    Dynamic Treasury
+                                </button>
+                                <button onclick="setStrategy(3)" id="strat3" class="strategy-btn py-2.5 px-2 text-xs font-semibold rounded-lg border border-slate-200 bg-white text-slate-600 hover:border-gold-300 transition">
+                                    Structured Credit
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Results Display Card -->
+                    <div class="md:col-span-5 bg-gradient-to-br from-slate-900 via-onyx-800 to-black text-white p-7 rounded-2xl border border-gold-400/40 space-y-6">
+                        <div>
+                            <span class="text-[10px] uppercase tracking-widest text-gold-400 block font-semibold">ESTIMATED ANNUAL YIELD</span>
+                            <span id="annualYieldDisplay" class="font-serif text-3xl font-extrabold text-white block mt-1">$290,000</span>
+                            <span class="text-[11px] text-slate-400">Paid out on a monthly compounding schedule</span>
+                        </div>
+
+                        <div class="pt-4 border-t border-slate-700/60 space-y-2.5 text-xs">
+                            <div class="flex justify-between">
+                                <span class="text-slate-400">Net Effective Rate:</span>
+                                <span id="apyRateDisplay" class="font-mono font-bold text-gold-300">5.80% APY</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-slate-400">Monthly Cashflow:</span>
+                                <span id="monthlyCashflowDisplay" class="font-mono text-white">$24,166</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-slate-400">Liquidity Settlement:</span>
+                                <span class="text-emerald-400 font-medium">T+0 Same Day</span>
+                            </div>
+                        </div>
+
+                        <button onclick="openContactModal()" class="w-full py-3 rounded-lg gold-gradient-bg text-slate-950 font-bold text-xs uppercase tracking-widest hover:brightness-105 transition">
+                            Lock In Allocation
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Institutional Governance & Compliance Section -->
+    <section id="governance" class="py-24 bg-white border-b border-slate-200/60">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-5 space-y-4">
+                    <span class="text-xs uppercase tracking-[0.3em] font-bold text-gold-600 block">Fortress Grade Infrastructure</span>
+                    <h2 class="font-serif text-3xl sm:text-4xl font-extrabold text-slate-900">
+                        Institutional Trust, Rigorously Audited.
+                    </h2>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        AGS Corporation adheres to Tier-1 international regulatory frameworks, ensuring complete legal and financial insulation for private family offices and multinational enterprises.
+                    </p>
+                </div>
+
+                <div class="lg:col-span-7 grid sm:grid-cols-2 gap-6">
+                    <div class="border border-slate-200 rounded-xl p-6 bg-pearl">
+                        <div class="w-10 h-10 rounded-lg bg-gold-100/70 text-gold-700 flex items-center justify-center font-bold text-sm mb-4">
+                            SOC
+                        </div>
+                        <h4 class="font-serif font-bold text-slate-900 text-base mb-1">SOC 2 Type II Certified</h4>
+                        <p class="text-xs text-slate-500 leading-relaxed">
+                            Continuous real-time continuous audits governing confidential data and fiduciary controls.
+                        </p>
+                    </div>
+
+                    <div class="border border-slate-200 rounded-xl p-6 bg-pearl">
+                        <div class="w-10 h-10 rounded-lg bg-gold-100/70 text-gold-700 flex items-center justify-center font-bold text-sm mb-4">
+                            ISO
+                        </div>
+                        <h4 class="font-serif font-bold text-slate-900 text-base mb-1">ISO 27001 & 27701</h4>
+                        <p class="text-xs text-slate-500 leading-relaxed">
+                            Certified information security architecture across all cryptographic vault clusters.
+                        </p>
+                    </div>
+
+                    <div class="border border-slate-200 rounded-xl p-6 bg-pearl">
+                        <div class="w-10 h-10 rounded-lg bg-gold-100/70 text-gold-700 flex items-center justify-center font-bold text-sm mb-4">
+                            SEC
+                        </div>
+                        <h4 class="font-serif font-bold text-slate-900 text-base mb-1">FINRA & SEC Frameworks</h4>
+                        <p class="text-xs text-slate-500 leading-relaxed">
+                            Institutional clearing and liquidity pathways routed through registered US and Swiss partners.
+                        </p>
+                    </div>
+
+                    <div class="border border-slate-200 rounded-xl p-6 bg-pearl">
+                        <div class="w-10 h-10 rounded-lg bg-gold-100/70 text-gold-700 flex items-center justify-center font-bold text-sm mb-4">
+                            256
+                        </div>
+                        <h4 class="font-serif font-bold text-slate-900 text-base mb-1">Post-Quantum Cryptography</h4>
+                        <p class="text-xs text-slate-500 leading-relaxed">
+                            Hardware security modules protecting authorization key shards with quorum multi-sig.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Client Testimonial / Endorsement Carousel -->
+    <section class="py-24 bg-pearl border-b border-slate-200/60">
+        <div class="max-w-4xl mx-auto px-6 text-center space-y-8">
+            <span class="text-xs uppercase tracking-[0.3em] font-bold text-gold-600 block">Privileged Endorsements</span>
+            <div class="font-serif text-2xl sm:text-3xl font-medium text-slate-900 italic leading-relaxed">
+                "AGS Corporation solved what three major Swiss private banks could not: true instant cross-border liquidity without bureaucratic delays, backed by ironclad institutional bankruptcy segregation."
+            </div>
+            <div>
+                <span class="font-serif font-bold text-slate-900 block text-lg">Lord Maximilian von Bern</span>
+                <span class="text-xs text-slate-500 uppercase tracking-widest">Managing Principal, Bern & Co. Multi-Family Office (Zurich)</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Luxury Invitation CTA Section -->
+    <section class="py-24 bg-white relative overflow-hidden">
+        <div class="max-w-5xl mx-auto px-6 text-center space-y-8 relative z-10">
+            <div class="w-16 h-16 rounded-2xl gold-gradient-bg mx-auto flex items-center justify-center shadow-lg">
+                <span class="font-serif font-extrabold text-2xl text-slate-950">AGS</span>
+            </div>
+            <h2 class="font-serif text-4xl sm:text-5xl font-extrabold text-slate-900">
+                Membership by Invitation & Approval
+            </h2>
+            <p class="text-slate-600 max-w-xl mx-auto text-base">
+                To maintain bespoke concierge ratios and unparalleled operational security, onboarding is strictly limited to accredited institutional entities and qualified private wealth accounts.
+            </p>
+            <div>
+                <button onclick="openContactModal()" class="px-10 py-5 rounded-xl gold-gradient-bg text-slate-950 font-bold text-sm tracking-widest uppercase shadow-luxury hover:scale-105 transition duration-300">
+                    Apply for Private Onboarding
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-slate-200 text-slate-500 text-xs py-16">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-10">
+            <div class="space-y-4">
+                <div class="flex items-center gap-2">
+                    <span class="font-serif font-bold text-base text-slate-900 tracking-wider">AGS CORPORATION</span>
+                </div>
+                <p class="text-[11px] leading-relaxed text-slate-400">
+                    Sovereign-grade financial infrastructure and global liquidity orchestration for high-net-worth families, enterprise treasuries, and institutions.
+                </p>
+                <div class="text-[10px] text-slate-400">
+                    © 2026 AGS Corporation Global AG. All rights reserved.
+                </div>
+            </div>
+
+            <div>
+                <span class="font-serif font-bold text-slate-900 block mb-4 uppercase tracking-wider text-xs">Global Hubs</span>
+                <ul class="space-y-2 text-[11px]">
+                    <li>Zurich: Bahnhofstrasse 45</li>
+                    <li>London: 1 Canada Square, Canary Wharf</li>
+                    <li>New York: 200 Park Avenue</li>
+                    <li>Singapore: Marina Bay Financial Centre</li>
+                </ul>
+            </div>
+
+            <div>
+                <span class="font-serif font-bold text-slate-900 block mb-4 uppercase tracking-wider text-xs">Solutions</span>
+                <ul class="space-y-2 text-[11px]">
+                    <li><a href="#solutions" class="hover:text-gold-600 transition">Multi-Currency Treasury</a></li>
+                    <li><a href="#solutions" class="hover:text-gold-600 transition">Segregated Cold Custody</a></li>
+                    <li><a href="#cards" class="hover:text-gold-600 transition">Sovereign Titanium Card</a></li>
+                    <li><a href="#simulator" class="hover:text-gold-600 transition">Algorithmic Yield Simulator</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <span class="font-serif font-bold text-slate-900 block mb-4 uppercase tracking-wider text-xs">Regulatory Notice</span>
+                <p class="text-[10px] leading-relaxed text-slate-400">
+                    AGS Corporation operates as a financial technology platform and provides fiduciary routing through chartered banking partners and licensed custodians. Deposits may be protected through statutory deposit insurance with qualifying partner institutions.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interactive Onboarding Modal -->
+    <div id="contactModal" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-2xl max-w-lg w-full border border-gold-200 p-8 shadow-2xl relative animate-in fade-in zoom-in duration-200">
+            <button onclick="closeContactModal()" class="absolute top-5 right-5 text-slate-400 hover:text-slate-800 text-xl font-bold">✕</button>
+            <div class="mb-6">
+                <span class="text-xs uppercase tracking-widest font-bold text-gold-600 block">Private Access Protocol</span>
+                <h3 class="font-serif text-2xl font-bold text-slate-900 mt-1">Request AGS Onboarding</h3>
+                <p class="text-xs text-slate-500 mt-1">Our Senior Wealth Attaché will respond within 4 business hours via encrypted channel.</p>
+            </div>
+            <form onsubmit="handleContactSubmit(event)" class="space-y-4 text-xs">
+                <div>
+                    <label class="block font-semibold text-slate-700 uppercase mb-1">Entity / Principal Full Name</label>
+                    <input type="text" required class="w-full px-3.5 py-2.5 rounded-lg border border-slate-200 focus:border-gold-500 focus:ring-1 focus:ring-gold-500 outline-none text-slate-900" placeholder="e.g. Lord Maximilian / Harrison Family Office">
+                </div>
+                <div>
+                    <label class="block font-semibold text-slate-700 uppercase mb-1">Corporate or Private Email</label>
+                    <input type="email" required class="w-full px-3.5 py-2.5 rounded-lg border border-slate-200 focus:border-gold-500 focus:ring-1 focus:ring-gold-500 outline-none text-slate-900" placeholder="principal@enterprise.com">
+                </div>
+                <div>
+                    <label class="block font-semibold text-slate-700 uppercase mb-1">Anticipated Treasury Volume</label>
+                    <select class="w-full px-3.5 py-2.5 rounded-lg border border-slate-200 focus:border-gold-500 focus:ring-1 focus:ring-gold-500 outline-none text-slate-900">
+                        <option>$1,000,000 - $5,000,000 USD</option>
+                        <option>$5,000,000 - $25,000,000 USD</option>
+                        <option>$25,000,000 - $100,000,000+ USD</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="block font-semibold text-slate-700 uppercase mb-1">Primary Jurisdiction</label>
+                    <input type="text" class="w-full px-3.5 py-2.5 rounded-lg border border-slate-200 focus:border-gold-500 focus:ring-1 focus:ring-gold-500 outline-none text-slate-900" placeholder="e.g. Switzerland / United Kingdom / Singapore">
+                </div>
+                <div class="pt-2">
+                    <button type="submit" class="w-full py-3.5 rounded-lg gold-gradient-bg text-slate-950 font-bold uppercase tracking-wider text-xs hover:brightness-105 transition shadow-md">
+                        Transmit Application
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Client Portal Modal -->
+    <div id="portalModal" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-2xl max-w-sm w-full border border-gold-200 p-8 shadow-2xl relative text-center">
+            <button onclick="closePortalModal()" class="absolute top-4 right-4 text-slate-400 hover:text-slate-800 text-lg">✕</button>
+            <div class="w-12 h-12 rounded-full bg-gold-50 border border-gold-300 mx-auto flex items-center justify-center text-gold-600 mb-4">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
+            </div>
+            <h3 class="font-serif text-xl font-bold text-slate-900">Biometric & Hardware Key Required</h3>
+            <p class="text-xs text-slate-500 mt-2 mb-6">Connect your AGS Hardware Security Key (FIDO2 / YubiKey) to authenticate your private session.</p>
+            <button onclick="alert('Hardware security key listener initialized. Please touch your physical key.')" class="w-full py-2.5 rounded-lg border border-slate-300 text-slate-700 font-semibold text-xs hover:bg-slate-50 transition">
+                Detect Security Key
+            </button>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="fixed bottom-6 right-6 bg-slate-900 text-white px-5 py-3 rounded-xl shadow-2xl border border-gold-400/50 hidden flex items-center gap-3 text-xs z-50">
+        <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+        <span id="toastMsg">Application Transmitted. A Wealth Attaché has been notified.</span>
+    </div>
+
+    <!-- Interactive Scripts -->
+    <script>
+        // Modal management
+        function openContactModal() {
+            document.getElementById('contactModal').classList.remove('hidden');
+        }
+        function closeContactModal() {
+            document.getElementById('contactModal').classList.add('hidden');
+        }
+        function openPortalModal() {
+            document.getElementById('portalModal').classList.remove('hidden');
+        }
+        function closePortalModal() {
+            document.getElementById('portalModal').classList.add('hidden');
+        }
+
+        function handleContactSubmit(e) {
+            e.preventDefault();
+            closeContactModal();
+            const toast = document.getElementById('toast');
+            toast.classList.remove('hidden');
+            setTimeout(() => {
+                toast.classList.add('hidden');
+            }, 4500);
+        }
+
+        // Simulator Logic
+        const capitalSlider = document.getElementById('capitalSlider');
+        const capitalDisplay = document.getElementById('capitalDisplay');
+        const annualYieldDisplay = document.getElementById('annualYieldDisplay');
+        const apyRateDisplay = document.getElementById('apyRateDisplay');
+        const monthlyCashflowDisplay = document.getElementById('monthlyCashflowDisplay');
+        const strategyDisplay = document.getElementById('strategyDisplay');
+
+        let currentAPY = 0.058; // 5.8%
+
+        const strategies = {
+            1: { name: 'Sovereign Prime (5.8% APY)', apy: 0.058 },
+            2: { name: 'Dynamic Treasury (7.4% APY)', apy: 0.074 },
+            3: { name: 'Structured Credit (9.6% APY)', apy: 0.096 }
+        };
+
+        function setStrategy(id) {
+            document.querySelectorAll('.strategy-btn').forEach(btn => {
+                btn.className = 'strategy-btn py-2.5 px-2 text-xs font-semibold rounded-lg border border-slate-200 bg-white text-slate-600 hover:border-gold-300 transition';
+            });
+            document.getElementById('strat' + id).className = 'strategy-btn py-2.5 px-2 text-xs font-semibold rounded-lg border border-gold-500 bg-gold-50 text-gold-900 transition';
+            currentAPY = strategies[id].apy;
+            strategyDisplay.textContent = strategies[id].name;
+            updateCalculations();
+        }
+
+        function updateCalculations() {
+            const capital = parseFloat(capitalSlider.value);
+            capitalDisplay.textContent = '$' + capital.toLocaleString();
+            
+            const annualYield = capital * currentAPY;
+            const monthlyYield = annualYield / 12;
+
+            annualYieldDisplay.textContent = '$' + Math.round(annualYield).toLocaleString();
+            monthlyCashflowDisplay.textContent = '$' + Math.round(monthlyYield).toLocaleString();
+            apyRateDisplay.textContent = (currentAPY * 100).toFixed(2) + '% APY';
+        }
+
+        capitalSlider.addEventListener('input', updateCalculations);
+        updateCalculations();
+    </script>
+</body>
+</html>
