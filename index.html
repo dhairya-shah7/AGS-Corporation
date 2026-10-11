@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AGS Corporation | Institutional Wealth & Treasury Operating System</title>
-    <!-- Fonts -->
+    <title>AGS Corporation | Digital Banking, Travel, Utility & Financial Services</title>
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -17,32 +17,32 @@
                     colors: {
                         gold: {
                             50: '#FAF8F0',
-                            100: '#F4EED7',
-                            200: '#E7D9A5',
-                            300: '#DAC474',
-                            400: '#CEB24B',
-                            500: '#C5A059',
-                            600: '#B0883A',
-                            700: '#8C6724',
-                            800: '#644714',
-                            900: '#3D2A08',
+                            100: '#F5EED5',
+                            200: '#EBDCB0',
+                            300: '#DFC685',
+                            400: '#D4AF5B',
+                            500: '#C59B3F',
+                            600: '#A97E29',
+                            700: '#865F1B',
+                            800: '#644413',
+                            900: '#3D2808',
                         },
-                        onyx: {
-                            900: '#0B0D10',
-                            800: '#14171E',
-                            700: '#1F242F',
+                        ags: {
+                            gold: '#C59B3F',
+                            dark: '#0F172A',
+                            accent: '#D4AF37',
                         },
                         pearl: '#FAFBFD',
-                        platinum: '#F1F3F7'
+                        alabaster: '#F6F7FA',
                     },
                     fontFamily: {
                         serif: ['Cinzel', 'serif'],
                         sans: ['"Plus Jakarta Sans"', 'sans-serif'],
                     },
                     boxShadow: {
-                        'luxury': '0 20px 45px -15px rgba(197, 160, 89, 0.15), 0 10px 25px -10px rgba(0, 0, 0, 0.04)',
-                        'card-hover': '0 25px 50px -12px rgba(197, 160, 89, 0.22)',
-                        'inner-glow': 'inset 0 1px 1px 0 rgba(255, 255, 255, 0.9), inset 0 -1px 1px 0 rgba(197, 160, 89, 0.2)',
+                        'luxury': '0 20px 45px -15px rgba(197, 155, 63, 0.16), 0 10px 25px -10px rgba(0, 0, 0, 0.04)',
+                        'gold-glow': '0 10px 30px -5px rgba(197, 155, 63, 0.22)',
+                        'card-hover': '0 25px 50px -12px rgba(15, 23, 42, 0.08), 0 0 25px 0 rgba(197, 155, 63, 0.14)',
                     }
                 }
             }
@@ -50,609 +50,805 @@
     </script>
     <style>
         .gold-gradient-text {
-            background: linear-gradient(135deg, #B0883A 0%, #D4AF37 40%, #8C6724 100%);
+            background: linear-gradient(135deg, #9C7227 0%, #D8B263 35%, #F5DE9C 60%, #9C7227 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
         .gold-gradient-bg {
-            background: linear-gradient(135deg, #C5A059 0%, #DFBA73 50%, #B0883A 100%);
+            background: linear-gradient(135deg, #C59B3F 0%, #E7C97C 50%, #A97E29 100%);
         }
         .luxury-mesh {
-            background-color: #ffffff;
+            background-color: #FFFFFF;
             background-image: 
-                radial-gradient(at 10% 15%, rgba(197, 160, 89, 0.06) 0px, transparent 55%),
-                radial-gradient(at 90% 10%, rgba(223, 186, 115, 0.08) 0px, transparent 50%),
-                radial-gradient(at 50% 50%, rgba(247, 243, 233, 0.5) 0px, transparent 65%),
-                radial-gradient(at 80% 90%, rgba(197, 160, 89, 0.05) 0px, transparent 50%);
-        }
-        .card-glare {
-            background: linear-gradient(135deg, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0.2) 100%);
-        }
-        .metallic-chip {
-            background: linear-gradient(135deg, #e0be75 0%, #f6e6b4 30%, #b89047 70%, #d8b461 100%);
+                radial-gradient(at 10% 12%, rgba(197, 155, 63, 0.07) 0px, transparent 55%),
+                radial-gradient(at 90% 10%, rgba(216, 178, 99, 0.09) 0px, transparent 50%),
+                radial-gradient(at 50% 50%, rgba(250, 248, 240, 0.7) 0px, transparent 65%),
+                radial-gradient(at 85% 85%, rgba(197, 155, 63, 0.06) 0px, transparent 50%);
         }
         /* Custom scrollbar */
         ::-webkit-scrollbar {
-            width: 8px;
+            width: 7px;
         }
         ::-webkit-scrollbar-track {
             background: #FAFAFA;
         }
         ::-webkit-scrollbar-thumb {
-            background: #D4AF37;
+            background: #C59B3F;
             border-radius: 4px;
         }
     </style>
 </head>
-<body class="bg-[#FCFCFD] text-slate-800 font-sans selection:bg-gold-500/20 selection:text-gold-800">
+<body class="bg-[#FCFCFE] text-slate-800 font-sans selection:bg-gold-500/20 selection:text-gold-900">
 
-    <!-- Top Luxury Dispatch Bar -->
-    <div class="border-b border-gold-200/40 bg-white/90 backdrop-blur-md text-[11px] tracking-widest uppercase text-slate-600 py-2 px-4">
-        <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-2">
-            <div class="flex items-center gap-3">
+    <!-- Top Dispatch & Ticker Bar -->
+    <div class="border-b border-gold-200/50 bg-white/95 backdrop-blur-md text-[11px] text-slate-600 py-2 px-4 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-3">
+            <div class="flex items-center gap-2.5">
                 <span class="inline-block w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-                <span class="font-medium text-slate-900 tracking-wider">AGS PRIVATE LIQUIDITY DESK</span>
-                <span class="text-gold-600 font-semibold">• TIER-1 INSTITUTIONAL CLEARING LIVE</span>
+                <span class="font-bold text-slate-900 tracking-wider">AGS CORPORATION</span>
+                <span class="text-gold-700 font-semibold">• B2B DIGITAL FINTECH & UTILITY POWERHOUSE</span>
+                <span class="text-slate-400 hidden sm:inline">|</span>
+                <span class="text-slate-500 hidden sm:inline">"Digital Bano, Tarraki Karo"</span>
             </div>
-            <div class="hidden md:flex items-center gap-6 text-[10px]">
-                <span>LONDON: 09:54 BST</span>
-                <span>ZURICH: 10:54 CEST</span>
-                <span>NEW YORK: 04:54 EDT</span>
-                <span>SINGAPORE: 16:54 SGT</span>
-                <span class="text-gold-700 font-semibold">GLOBAL ROUTING: SECURE 256-BIT</span>
+            <div class="hidden md:flex items-center gap-6 text-[11px] text-slate-500 font-medium">
+                <span class="flex items-center gap-1.5"><strong class="text-emerald-700">● 99.98%</strong> Core API Uptime</span>
+                <span>IRCTC Certified Principal Agent</span>
+                <span>NPCI Bharat BillPay Partner</span>
+                <a href="#calculator" class="text-gold-700 hover:text-gold-800 font-bold underline transition">Calculate Income →</a>
             </div>
         </div>
     </div>
 
-    <!-- Navigation Header -->
-    <header class="sticky top-0 z-50 bg-white/80 backdrop-blur-xl border-b border-slate-100 transition-all duration-300">
+    <!-- Main Header Navigation -->
+    <header class="bg-white/90 backdrop-blur-xl border-b border-slate-100 transition-all duration-300">
         <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
             <!-- Brand Logo -->
-            <a href="#" class="flex items-center gap-3 group">
-                <div class="w-11 h-11 rounded-lg border border-gold-400/50 bg-gradient-to-br from-gold-50 via-white to-gold-100 flex items-center justify-center shadow-sm group-hover:shadow-md transition">
-                    <span class="font-serif font-bold text-lg gold-gradient-text tracking-wider">AGS</span>
+            <a href="#" class="flex items-center gap-3.5 group">
+                <div class="w-11 h-11 rounded-xl border border-gold-400/60 bg-gradient-to-br from-gold-50 via-white to-gold-100 flex items-center justify-center shadow-sm group-hover:scale-105 transition duration-300">
+                    <span class="font-bold text-xl gold-gradient-text tracking-wider">AGS</span>
                 </div>
                 <div>
-                    <span class="font-serif text-lg font-bold tracking-[0.2em] text-slate-900 block leading-tight">AGS CORPORATION</span>
-                    <span class="text-[9px] uppercase tracking-[0.3em] text-gold-600 font-semibold block">Private Capital & Wealth</span>
+                    <span class="text-2xl font-extrabold tracking-tight text-slate-950 block leading-tight">
+                        AGS <span class="text-gold-600">Corporation</span>
+                    </span>
+                    <span class="text-[9px] uppercase tracking-[0.25em] text-slate-400 font-bold block">
+                        DIGITAL UTILITY & FINTECH
+                    </span>
                 </div>
             </a>
 
-            <!-- Desktop Links -->
-            <nav class="hidden lg:flex items-center gap-8 text-sm font-medium text-slate-600">
-                <a href="#solutions" class="hover:text-gold-600 transition tracking-wide">Institutional Wealth</a>
-                <a href="#treasury" class="hover:text-gold-600 transition tracking-wide">Treasury Suite</a>
-                <a href="#cards" class="hover:text-gold-600 transition tracking-wide">Sovereign Card</a>
-                <a href="#simulator" class="hover:text-gold-600 transition tracking-wide">Yield Model</a>
-                <a href="#governance" class="hover:text-gold-600 transition tracking-wide">Compliance & Trust</a>
+            <!-- Navigation Links -->
+            <nav class="hidden xl:flex items-center gap-8 text-sm font-semibold text-slate-600">
+                <a href="#services" class="hover:text-gold-600 transition">Services We Offer</a>
+                <a href="#partnerships" class="hover:text-gold-600 transition">Partnership Models</a>
+                <a href="#seva-kendra" class="hover:text-gold-600 transition">AGS Seva Kendra</a>
+                <a href="#calculator" class="hover:text-gold-600 transition">Income Calculator</a>
+                <a href="#achievements" class="hover:text-gold-600 transition">Network Scale</a>
+                <a href="#why-us" class="hover:text-gold-600 transition">Why Choose AGS</a>
             </nav>
 
             <!-- Actions -->
-            <div class="flex items-center gap-4">
-                <button onclick="openPortalModal()" class="hidden sm:inline-flex text-xs uppercase tracking-wider font-semibold text-slate-700 hover:text-gold-600 transition py-2 px-3">
-                    Client Portal
+            <div class="flex items-center gap-3">
+                <button onclick="openLoginModal()" class="hidden sm:inline-flex items-center gap-2 text-xs uppercase tracking-wider font-bold text-slate-800 hover:text-gold-600 transition py-2 px-3">
+                    <svg class="w-4 h-4 text-gold-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1"/></svg>
+                    <span>Partner Login</span>
                 </button>
-                <button onclick="openContactModal()" class="relative inline-flex items-center justify-center px-6 py-2.5 text-xs font-semibold uppercase tracking-widest text-slate-950 transition overflow-hidden rounded-full shadow-md group bg-gradient-to-r from-gold-300 via-gold-400 to-gold-500 hover:shadow-gold-500/30 hover:scale-[1.02]">
-                    <span class="relative z-10 font-bold">Request Private Access</span>
-                    <div class="absolute inset-0 bg-white/20 opacity-0 group-hover:opacity-100 transition duration-300"></div>
+                <button onclick="openApplyModal('General Inquiry')" class="relative inline-flex items-center justify-center px-5 py-2.5 text-xs font-bold uppercase tracking-wider text-slate-950 rounded-full shadow-gold-glow gold-gradient-bg hover:scale-105 transition duration-200">
+                    <span>Join As Partner</span>
                 </button>
             </div>
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="luxury-mesh relative pt-16 pb-24 lg:pt-24 lg:pb-32 overflow-hidden border-b border-slate-100">
-        <!-- Decorative ambient lights -->
-        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-gradient-to-r from-gold-200/20 via-gold-100/30 to-amber-100/20 blur-3xl -z-10 rounded-full pointer-events-none"></div>
+    <!-- Hero Section (White, Luxurious, Clean - WITHOUT any merchant terminal mockup) -->
+    <section class="luxury-mesh relative pt-16 pb-24 lg:pt-20 lg:pb-28 overflow-hidden border-b border-slate-100">
+        <!-- Ambient decorative lights -->
+        <div class="absolute top-1/4 right-1/4 w-[750px] h-[400px] bg-gradient-to-br from-gold-200/25 via-gold-100/35 to-amber-100/20 blur-3xl -z-10 rounded-full pointer-events-none"></div>
 
         <div class="max-w-7xl mx-auto px-6">
             <div class="grid lg:grid-cols-12 gap-12 items-center">
-                <!-- Hero Left Copy -->
-                <div class="lg:col-span-7 space-y-8">
+                
+                <!-- Left Hero Copy -->
+                <div class="lg:col-span-7 space-y-7">
                     <!-- Pill Tag -->
-                    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-gold-300/60 bg-gold-50/70 text-gold-800 text-xs font-semibold uppercase tracking-widest">
-                        <svg class="w-3.5 h-3.5 text-gold-600" fill="currentColor" viewBox="0 0 20 20">
-                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
-                        </svg>
-                        <span>Sovereign Wealth & Private Family Office Infrastructure</span>
+                    <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full border border-gold-300/80 bg-white shadow-sm text-xs font-bold text-slate-800">
+                        <span class="w-2 h-2 rounded-full bg-gold-500"></span>
+                        <span class="text-gold-700 font-semibold uppercase tracking-wider">Growing Business Opportunity</span>
+                        <span class="text-slate-300">|</span>
+                        <span>Empowering 1,75,000+ Retail Businesses</span>
                     </div>
 
                     <!-- Headline -->
                     <div class="space-y-3">
-                        <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-950 tracking-tight leading-[1.12]">
-                            Architecting Capital. <br>
-                            <span class="gold-gradient-text">Preserving Empires.</span>
+                        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-950 tracking-tight leading-[1.12]">
+                            Digital Bano, <br>
+                            <span class="gold-gradient-text">Tarraki Karo.</span>
                         </h1>
-                        <p class="text-lg sm:text-xl text-slate-600 font-light max-w-2xl leading-relaxed pt-2">
-                            AGS Corporation unifies algorithmic global treasury management, discretionary multi-asset custody, and private credit corridors into an ultra-secure white-glove operating system.
+                        <p class="text-base sm:text-lg text-slate-600 font-normal max-w-2xl leading-relaxed">
+                            <strong>AGS Corporation</strong> is a dynamic and rapidly expanding B2B digital fintech & utility powerhouse. Explore seamless digital services close to you: Banking, Travel, Insurance, Utility, Entertainment & Courier services—all accessible with ease from your store.
                         </p>
                     </div>
 
-                    <!-- Key Metrics Strip -->
-                    <div class="grid grid-cols-3 gap-6 pt-2 pb-2 border-y border-slate-200/60 max-w-xl">
+                    <!-- Earning Highlight Banner -->
+                    <div class="bg-gradient-to-r from-gold-50 via-white to-gold-100/50 border border-gold-300/80 rounded-2xl p-4 sm:p-5 flex flex-wrap sm:flex-nowrap items-center justify-between gap-4 shadow-sm">
                         <div>
-                            <span class="block font-serif text-2xl sm:text-3xl font-bold text-slate-900">$18.4B+</span>
-                            <span class="text-[11px] uppercase tracking-wider text-slate-500 font-medium">Assets Under Routing</span>
+                            <span class="text-xs uppercase font-bold text-gold-700 tracking-wider block">Start Earning Immediately</span>
+                            <span class="text-2xl sm:text-3xl font-extrabold text-slate-900">₹2,40,000+ per year</span>
+                            <span class="text-xs text-slate-500 block mt-0.5">Be a one-stop digital shop for all community services</span>
                         </div>
-                        <div>
-                            <span class="block font-serif text-2xl sm:text-3xl font-bold text-slate-900">42</span>
-                            <span class="text-[11px] uppercase tracking-wider text-slate-500 font-medium">Jurisdictions Cleared</span>
-                        </div>
-                        <div>
-                            <span class="block font-serif text-2xl sm:text-3xl font-bold text-gold-600">0.00%</span>
-                            <span class="text-[11px] uppercase tracking-wider text-slate-500 font-medium">Custodial Breaches</span>
-                        </div>
-                    </div>
-
-                    <!-- CTA Buttons -->
-                    <div class="flex flex-wrap items-center gap-4 pt-2">
-                        <button onclick="openContactModal()" class="px-8 py-4 rounded-xl gold-gradient-bg text-slate-950 font-bold text-sm tracking-wider uppercase shadow-luxury hover:shadow-card-hover hover:-translate-y-0.5 transition duration-200 flex items-center gap-3">
-                            <span>Open Institutional Account</span>
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
-                        </button>
-                        <a href="#simulator" class="px-7 py-4 rounded-xl bg-white border border-gold-300 text-slate-800 font-semibold text-sm tracking-wider uppercase hover:bg-gold-50/50 hover:border-gold-500 transition duration-200 shadow-sm flex items-center gap-2">
-                            <span>Test Yield Simulator</span>
-                            <svg class="w-4 h-4 text-gold-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+                        <a href="#calculator" class="px-5 py-2.5 rounded-xl bg-slate-900 text-white font-bold text-xs uppercase tracking-wider hover:bg-gold-600 transition whitespace-nowrap shadow">
+                            Income Calculator →
                         </a>
                     </div>
 
-                    <!-- Reassurance badges -->
-                    <div class="flex items-center gap-6 text-xs text-slate-500 pt-2">
+                    <!-- Action Buttons -->
+                    <div class="flex flex-wrap items-center gap-4 pt-1">
+                        <a href="#services" class="px-8 py-4 rounded-xl gold-gradient-bg text-slate-950 font-bold text-xs uppercase tracking-widest shadow-luxury hover:scale-105 transition duration-200 flex items-center gap-2">
+                            <span>Our Services</span>
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                        </a>
+                        <button onclick="openApplyModal('Partner Inquiry')" class="px-7 py-4 rounded-xl bg-white border border-gold-300 text-slate-800 font-bold text-xs uppercase tracking-wider hover:border-gold-500 hover:bg-gold-50/40 transition duration-200 shadow-sm flex items-center gap-2">
+                            <span>Partner With Us</span>
+                        </button>
+                    </div>
+
+                    <!-- Trust indicators -->
+                    <div class="flex flex-wrap items-center gap-6 text-xs text-slate-500 pt-2 font-medium">
                         <div class="flex items-center gap-2">
-                            <svg class="w-4 h-4 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-                            <span>SEC & FINRA Regulated Custody</span>
+                            <svg class="w-4 h-4 text-emerald-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                            <span>NPCI Bharat BillPay Certified</span>
                         </div>
                         <div class="flex items-center gap-2">
-                            <svg class="w-4 h-4 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-                            <span>Swiss Cold-Vault Architecture</span>
+                            <svg class="w-4 h-4 text-emerald-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                            <span>IRCTC Authorized Principal</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <svg class="w-4 h-4 text-emerald-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                            <span>ISO 27001 Data Security</span>
                         </div>
                     </div>
                 </div>
 
-                <!-- Hero Right: Luxury Glassmorphic Terminal Card -->
+                <!-- Right Hero: Pure White & Luxurious Multi-Service Showcase (NO Terminal Mockup) -->
                 <div class="lg:col-span-5 relative">
-                    <!-- Glow behind card -->
-                    <div class="absolute -inset-2 bg-gradient-to-r from-gold-300 to-amber-200 rounded-3xl blur-2xl opacity-40 -z-10"></div>
-
-                    <!-- Main Luxury Dashboard Mockup -->
-                    <div class="bg-white/95 rounded-2xl border border-gold-200/70 p-6 sm:p-7 shadow-2xl relative overflow-hidden backdrop-blur-xl">
-                        <!-- Top status bar -->
-                        <div class="flex justify-between items-center pb-5 border-b border-slate-100">
-                            <div class="flex items-center gap-3">
-                                <div class="w-3 h-3 rounded-full bg-gold-400"></div>
-                                <span class="text-xs uppercase font-serif tracking-widest font-bold text-slate-800">AGS SOVEREIGN TERMINAL</span>
+                    <div class="bg-white rounded-3xl border border-gold-200/90 p-8 shadow-2xl relative backdrop-blur-xl space-y-6">
+                        
+                        <div class="flex justify-between items-center pb-4 border-b border-slate-100">
+                            <div>
+                                <span class="text-xs uppercase tracking-wider font-extrabold text-slate-900 block">AGS Digital Ecosystem</span>
+                                <span class="text-[10px] text-gold-700 font-semibold">Turnkey Retail Business Platform</span>
                             </div>
-                            <span class="text-[10px] font-mono bg-emerald-50 text-emerald-700 px-2.5 py-1 rounded-full font-semibold border border-emerald-200/60">LIVE VAULT AUDIT</span>
+                            <span class="px-2.5 py-1 rounded-full bg-emerald-50 text-emerald-700 font-bold text-[10px] border border-emerald-200">
+                                50+ Services Active
+                            </span>
                         </div>
 
-                        <!-- Balance display -->
-                        <div class="py-5">
-                            <span class="text-xs font-semibold uppercase tracking-wider text-slate-400">Total Consolidated Liquidity</span>
-                            <div class="flex items-baseline gap-2 mt-1">
-                                <span class="font-serif text-3xl sm:text-4xl font-extrabold text-slate-900">$84,920,410.00</span>
-                                <span class="text-xs font-bold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded">+14.2% YTD</span>
-                            </div>
-                            <span class="text-xs text-slate-400 mt-0.5 block">Allocated across Zurich, London & Singapore Nodes</span>
-                        </div>
-
-                        <!-- Miniature Graphic Representation -->
-                        <div class="bg-slate-50 rounded-xl p-4 border border-slate-100 my-2">
-                            <div class="flex justify-between text-xs font-semibold mb-2 text-slate-600">
-                                <span>Yield Performance (Aggregated)</span>
-                                <span class="text-gold-700 font-mono">8.42% Net APY</span>
-                            </div>
-                            <!-- SVG Line Graph -->
-                            <div class="h-20 w-full">
-                                <svg class="w-full h-full overflow-visible" viewBox="0 0 300 80" fill="none">
-                                    <defs>
-                                        <linearGradient id="agsGradient" x1="0" y1="0" x2="0" y2="1">
-                                            <stop offset="0%" stop-color="#C5A059" stop-opacity="0.3"/>
-                                            <stop offset="100%" stop-color="#C5A059" stop-opacity="0"/>
-                                        </linearGradient>
-                                    </defs>
-                                    <path d="M0 65 Q 40 50, 80 55 T 160 30 T 240 22 T 300 10 L 300 80 L 0 80 Z" fill="url(#agsGradient)" />
-                                    <path d="M0 65 Q 40 50, 80 55 T 160 30 T 240 22 T 300 10" stroke="#B0883A" stroke-width="2.5" stroke-linecap="round" />
-                                    <circle cx="300" cy="10" r="4" fill="#B0883A" />
-                                </svg>
-                            </div>
-                        </div>
-
-                        <!-- Asset allocation breakdown -->
-                        <div class="space-y-3 pt-3">
-                            <div class="text-xs font-semibold uppercase tracking-wider text-slate-400">Vault Segregation</div>
-                            <div class="space-y-2 text-xs">
-                                <div class="flex justify-between items-center bg-white p-2.5 rounded-lg border border-slate-100 shadow-sm">
-                                    <div class="flex items-center gap-2">
-                                        <div class="w-2 h-2 rounded-full bg-gold-500"></div>
-                                        <span class="font-medium text-slate-800">Sovereign Treasury Bills & Notes</span>
-                                    </div>
-                                    <span class="font-mono font-semibold text-slate-900">$48,200,000</span>
+                        <!-- Elegant Visual Feature Cards -->
+                        <div class="space-y-3">
+                            <div class="p-3.5 rounded-xl border border-slate-100 bg-pearl hover:border-gold-300 transition flex items-center gap-4">
+                                <div class="w-12 h-12 rounded-xl bg-gold-100 text-gold-800 flex items-center justify-center font-bold text-lg">
+                                    ₹
                                 </div>
-                                <div class="flex justify-between items-center bg-white p-2.5 rounded-lg border border-slate-100 shadow-sm">
-                                    <div class="flex items-center gap-2">
-                                        <div class="w-2 h-2 rounded-full bg-slate-900"></div>
-                                        <span class="font-medium text-slate-800">Physical Allocated Gold (Swiss Bullion)</span>
-                                    </div>
-                                    <span class="font-mono font-semibold text-slate-900">$22,450,000</span>
+                                <div class="flex-1">
+                                    <h4 class="font-bold text-slate-900 text-sm">Banking & Aadhaar ATM</h4>
+                                    <p class="text-xs text-slate-500">AEPS, Micro-ATM, DMT Money Transfer & NSDL Accounts</p>
                                 </div>
-                                <div class="flex justify-between items-center bg-white p-2.5 rounded-lg border border-slate-100 shadow-sm">
-                                    <div class="flex items-center gap-2">
-                                        <div class="w-2 h-2 rounded-full bg-emerald-500"></div>
-                                        <span class="font-medium text-slate-800">Private Credit & Algorithmic Arbitrage</span>
-                                    </div>
-                                    <span class="font-mono font-semibold text-slate-900">$14,270,410</span>
+                                <span class="text-xs text-gold-700 font-bold">Instant</span>
+                            </div>
+
+                            <div class="p-3.5 rounded-xl border border-slate-100 bg-pearl hover:border-gold-300 transition flex items-center gap-4">
+                                <div class="w-12 h-12 rounded-xl bg-gold-100 text-gold-800 flex items-center justify-center font-bold text-lg">
+                                    ✈
                                 </div>
+                                <div class="flex-1">
+                                    <h4 class="font-bold text-slate-900 text-sm">Travel & IRCTC Ticketing</h4>
+                                    <p class="text-xs text-slate-500">Official Railway Tatkal, Flights, Hotels & Bus Booking</p>
+                                </div>
+                                <span class="text-xs text-gold-700 font-bold">Authorized</span>
+                            </div>
+
+                            <div class="p-3.5 rounded-xl border border-slate-100 bg-pearl hover:border-gold-300 transition flex items-center gap-4">
+                                <div class="w-12 h-12 rounded-xl bg-gold-100 text-gold-800 flex items-center justify-center font-bold text-lg">
+                                    ⚡
+                                </div>
+                                <div class="flex-1">
+                                    <h4 class="font-bold text-slate-900 text-sm">Bharat BillPay & Utilities</h4>
+                                    <p class="text-xs text-slate-500">Electricity, Water, Gas, FASTag, Mobile & DTH Recharge</p>
+                                </div>
+                                <span class="text-xs text-gold-700 font-bold">BBPS</span>
+                            </div>
+
+                            <div class="p-3.5 rounded-xl border border-slate-100 bg-pearl hover:border-gold-300 transition flex items-center gap-4">
+                                <div class="w-12 h-12 rounded-xl bg-gold-100 text-gold-800 flex items-center justify-center font-bold text-lg">
+                                    🛡
+                                </div>
+                                <div class="flex-1">
+                                    <h4 class="font-bold text-slate-900 text-sm">Insurance & Courier Delivery</h4>
+                                    <p class="text-xs text-slate-500">Two-Wheeler, Health Policies & Pan-India Parcel Shipping</p>
+                                </div>
+                                <span class="text-xs text-gold-700 font-bold">Pan-India</span>
                             </div>
                         </div>
 
-                        <!-- Card preview mini footer -->
-                        <div class="mt-5 pt-4 border-t border-slate-100 flex items-center justify-between">
-                            <div class="flex items-center gap-2">
-                                <div class="w-6 h-6 rounded-full gold-gradient-bg flex items-center justify-center text-[10px] font-bold text-slate-950">✓</div>
-                                <span class="text-[11px] text-slate-500 font-medium">Bespoke Concierge Assigned</span>
-                            </div>
-                            <span class="text-[11px] font-serif font-bold text-gold-700">MEMBERSHIP: SOVEREIGN</span>
+                        <!-- Footnote -->
+                        <div class="pt-4 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500">
+                            <span>Ready to empower your business?</span>
+                            <button onclick="openApplyModal('Quick Start')" class="font-bold text-gold-700 hover:text-gold-900 transition underline">
+                                Apply in 2 Mins →
+                            </button>
                         </div>
+
                     </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Achievements Section (MOS-World Reference) -->
+    <section id="achievements" class="py-16 bg-white border-b border-slate-200/60">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <h3 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mb-2">Our Achievements</h3>
+                <p class="text-xs sm:text-sm text-slate-500 max-w-2xl mx-auto leading-relaxed">
+                    Encompassing groundbreaking technological advancements, notable strides in accessibility, and fostering entrepreneurship across communities nationwide under AGS Corporation.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+                <div class="p-6 rounded-2xl bg-pearl border border-gold-200/60 hover:shadow-md transition">
+                    <h4 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mb-1">1,75,000+</h4>
+                    <p class="text-xs font-bold text-gold-700 uppercase tracking-wider">Active Agents</p>
+                    <span class="text-[11px] text-slate-400 mt-1 block">Local retail stores & entrepreneurs</span>
+                </div>
+
+                <div class="p-6 rounded-2xl bg-pearl border border-gold-200/60 hover:shadow-md transition">
+                    <h4 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mb-1">11,500+</h4>
+                    <p class="text-xs font-bold text-gold-700 uppercase tracking-wider">Distributors</p>
+                    <span class="text-[11px] text-slate-400 mt-1 block">Managing regional distribution networks</span>
+                </div>
+
+                <div class="p-6 rounded-2xl bg-pearl border border-gold-200/60 hover:shadow-md transition">
+                    <h4 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mb-1">900+</h4>
+                    <p class="text-xs font-bold text-gold-700 uppercase tracking-wider">Master Distributors</p>
+                    <span class="text-[11px] text-slate-400 mt-1 block">Territory leaders across multiple districts</span>
+                </div>
+
+                <div class="p-6 rounded-2xl bg-pearl border border-gold-200/60 hover:shadow-md transition">
+                    <h4 class="text-3xl sm:text-4xl font-extrabold text-gold-600 mb-1">350+</h4>
+                    <p class="text-xs font-bold text-slate-900 uppercase tracking-wider">AGS Seva Kendras</p>
+                    <span class="text-[11px] text-slate-400 mt-1 block">Exclusive pin-code franchise hubs</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Institutional Partners / Trust Ticker -->
-    <section class="py-12 bg-white border-b border-slate-200/60">
+    <!-- Services We Offer Section (Deep MOS-World Comprehensive Categorization) -->
+    <section id="services" class="py-24 bg-pearl border-b border-slate-200/60">
         <div class="max-w-7xl mx-auto px-6">
-            <p class="text-center text-[11px] uppercase tracking-[0.3em] font-semibold text-slate-400 mb-8">
-                Interfacing With Premier Global Custodians, Clearing Houses & Exchanges
-            </p>
-            <div class="flex flex-wrap justify-center items-center gap-10 md:gap-16 opacity-75 grayscale hover:grayscale-0 transition duration-300">
-                <div class="font-serif tracking-widest text-lg font-bold text-slate-700">ZURICH VAULT CUSTODY</div>
-                <div class="font-serif tracking-widest text-lg font-bold text-slate-700">LOMBARD LIQUIDITY CORP</div>
-                <div class="font-serif tracking-widest text-lg font-bold text-slate-700">GENEVA PRIVATE ASSETS</div>
-                <div class="font-serif tracking-widest text-lg font-bold text-slate-700">ROYAL BANK CLEARING</div>
-                <div class="font-serif tracking-widest text-lg font-bold text-slate-700">APEX ASSET HORIZON</div>
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+                <span class="text-xs uppercase tracking-[0.3em] font-bold text-gold-600 block">Comprehensive Multi-Service Spectrum</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900">
+                    Services We Offer
+                </h2>
+                <p class="text-slate-600 text-sm sm:text-base">
+                    One single AGS Corporation account equips your retail business with 50+ indispensable digital utilities.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- 1. Banking -->
+                <div class="bg-white rounded-2xl p-7 border border-slate-200/80 hover:border-gold-300 shadow-sm hover:shadow-card-hover hover:-translate-y-1 transition duration-300 group">
+                    <div class="w-12 h-12 rounded-xl bg-gold-50 border border-gold-200 flex items-center justify-center mb-5 text-gold-700 font-bold group-hover:bg-gold-500 group-hover:text-white transition">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">Banking Services</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed mb-5">
+                        Explore seamless banking services right at your doorstep. Cash withdrawals, micro-ATM swiping, money transfers, and savings account opening.
+                    </p>
+                    <div class="grid grid-cols-2 gap-2 text-xs font-semibold text-slate-700">
+                        <span class="p-2 rounded bg-slate-50 border border-slate-100">✓ AEPS Cash Out</span>
+                        <span class="p-2 rounded bg-slate-50 border border-slate-100">✓ Micro-ATM (M-ATM)</span>
+                        <span class="p-2 rounded bg-slate-50 border border-slate-100">✓ DMT Money Transfer</span>
+                        <span class="p-2 rounded bg-slate-50 border border-slate-100">✓ NSDL Bank Account</span>
+                    </div>
+                    <div class="mt-5 pt-4 border-t border-slate-100 flex justify-between items-center text-xs">
+                        <span class="text-gold-700 font-bold">Earn up to ₹15/txn</span>
+                        <button onclick="openApplyModal('Banking Services')" class="font-bold text-slate-900 hover:text-gold-600 transition">Know More →</button>
+                    </div>
+                </div>
+
+                <!-- 2. Travel -->
+                <div class="bg-white rounded-2xl p-7 border border-slate-200/80 hover:border-gold-300 shadow-sm hover:shadow-card-hover hover:-translate-y-1 transition duration-300 group">
+                    <div class="w-12 h-12 rounded-xl bg-gold-50 border border-gold-200 flex items-center justify-center mb-5 text-gold-700 font-bold group-hover:bg-gold-500 group-hover:text-white transition">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">Travel Services</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed mb-5">
+                        Plan and book travels effortlessly. From authorized IRCTC railway bookings to domestic and international flights, luxury buses, and hotels.
+                    </p>
+                    <div class="grid grid-cols-2 gap-2 text-xs font-semibold text-slate-700">
+                        <span class="p-2 rounded bg-slate-50 border border-slate-100">✓ IRCTC Authorized Rail</span>
+                        <span class="p-2 rounded bg-slate-50 border border-slate-100">✓ Flight Bookings</span>
+                        <span class="p-2 rounded bg-slate-50 border border-slate-100">✓ Inter-state Bus</span>
+                        <span class="p-2 rounded bg-slate-50 border border-slate-100">✓ Hotel Reservations</span>
+                    </div>
+                    <div class="mt-5 pt-4 border-t border-slate-100 flex justify-between items-center text-xs">
+                        <span class="text-gold-700 font-bold">Tatkal AC & Sleeper</span>
+                        <button onclick="openApplyModal('Travel & IRCTC')" class="font-bold text-slate-900 hover:text-gold-600 transition">Know More →</button>
+                    </div>
+                </div>
+
+                <!-- 3. Utility (BBPS) -->
+                <div class="bg-white rounded-2xl p-7 border border-slate-200/80 hover:border-gold-300 shadow-sm hover:shadow-card-hover hover:-translate-y-1 transition duration-300 group">
+                    <div class="w-12 h-12 rounded-xl bg-gold-50 border border-gold-200 flex items-center justify-center mb-5 text-gold-700 font-bold group-hover:bg-gold-500 group-hover:text-white transition">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">Utility Solutions (BBPS)</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed mb-5">
+                        Access to essential utilities shouldn't be hard. Instant bill payments for electricity, water, gas, FASTag, LIC premiums, and mobile recharges.
+                    </p>
+                    <div class="grid grid-cols-2 gap-2 text-xs font-semibold text-slate-700">
+                        <span class="p-2 rounded bg-slate-50 border border-slate-100">✓ Electricity & Gas Bills</span>
+                        <span class="p-2 rounded bg-slate-50 border border-slate-100">✓ Mobile / DTH Recharge</span>
+                        <span class="p-2 rounded bg-slate-50 border border-slate-100">✓ FASTag Recharge</span>
+                        <span class="p-2 rounded bg-slate-50 border border-slate-100">✓ LIC & CCBP Bill Pay</span>
+                    </div>
+                    <div class="mt-5 pt-4 border-t border-slate-100 flex justify-between items-center text-xs">
+                        <span class="text-gold-700 font-bold">100+ State Utilities</span>
+                        <button onclick="openApplyModal('Utility BBPS')" class="font-bold text-slate-900 hover:text-gold-600 transition">Know More →</button>
+                    </div>
+                </div>
+
+                <!-- 4. Insurance Plans -->
+                <div class="bg-white rounded-2xl p-7 border border-slate-200/80 hover:border-gold-300 shadow-sm hover:shadow-card-hover hover:-translate-y-1 transition duration-300 group">
+                    <div class="w-12 h-12 rounded-xl bg-gold-50 border border-gold-200 flex items-center justify-center mb-5 text-gold-700 font-bold group-hover:bg-gold-500 group-hover:text-white transition">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">Comprehensive Insurance</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed mb-5">
+                        Safeguard what matters most. Instant motor insurance quotes, health plans, and travel insurance for your walk-in customers.
+                    </p>
+                    <div class="grid grid-cols-2 gap-2 text-xs font-semibold text-slate-700">
+                        <span class="p-2 rounded bg-slate-50 border border-slate-100">✓ Two-Wheeler Insurance</span>
+                        <span class="p-2 rounded bg-slate-50 border border-slate-100">✓ Four-Wheeler & Commercial</span>
+                        <span class="p-2 rounded bg-slate-50 border border-slate-100">✓ Health Insurance</span>
+                        <span class="p-2 rounded bg-slate-50 border border-slate-100">✓ Travel Insurance</span>
+                    </div>
+                    <div class="mt-5 pt-4 border-t border-slate-100 flex justify-between items-center text-xs">
+                        <span class="text-gold-700 font-bold">Attractive POSP Margins</span>
+                        <button onclick="openApplyModal('Insurance POSP')" class="font-bold text-slate-900 hover:text-gold-600 transition">Know More →</button>
+                    </div>
+                </div>
+
+                <!-- 5. Courier & Cargo Logistics -->
+                <div class="bg-white rounded-2xl p-7 border border-slate-200/80 hover:border-gold-300 shadow-sm hover:shadow-card-hover hover:-translate-y-1 transition duration-300 group">
+                    <div class="w-12 h-12 rounded-xl bg-gold-50 border border-gold-200 flex items-center justify-center mb-5 text-gold-700 font-bold group-hover:bg-gold-500 group-hover:text-white transition">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">Multi-Courier & Cargo</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed mb-5">
+                        Send and receive packages without the hassle. Connecting rural and urban India through an extensive courier logistics network.
+                    </p>
+                    <div class="grid grid-cols-2 gap-2 text-xs font-semibold text-slate-700">
+                        <span class="p-2 rounded bg-slate-50 border border-slate-100">✓ Pan-India Courier Booking</span>
+                        <span class="p-2 rounded bg-slate-50 border border-slate-100">✓ Doorstep Parcel Pickup</span>
+                        <span class="p-2 rounded bg-slate-50 border border-slate-100">✓ ONDC Seller Integration</span>
+                        <span class="p-2 rounded bg-slate-50 border border-slate-100">✓ Live Track & Trace</span>
+                    </div>
+                    <div class="mt-5 pt-4 border-t border-slate-100 flex justify-between items-center text-xs">
+                        <span class="text-gold-700 font-bold">Reliable Delivery Network</span>
+                        <button onclick="openApplyModal('Courier Cargo')" class="font-bold text-slate-900 hover:text-gold-600 transition">Know More →</button>
+                    </div>
+                </div>
+
+                <!-- 6. Digital Marketing & Citizen G2C -->
+                <div class="bg-white rounded-2xl p-7 border border-slate-200/80 hover:border-gold-300 shadow-sm hover:shadow-card-hover hover:-translate-y-1 transition duration-300 group">
+                    <div class="w-12 h-12 rounded-xl bg-gold-50 border border-gold-200 flex items-center justify-center mb-5 text-gold-700 font-bold group-hover:bg-gold-500 group-hover:text-white transition">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">Digital Services & Citizen G2C</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed mb-5">
+                        Drive ROI and growth with digital marketing, instant paperless PAN card creation, ITR filing, and local promotional tools.
+                    </p>
+                    <div class="grid grid-cols-2 gap-2 text-xs font-semibold text-slate-700">
+                        <span class="p-2 rounded bg-slate-50 border border-slate-100">✓ Instant PAN Card (NSDL)</span>
+                        <span class="p-2 rounded bg-slate-50 border border-slate-100">✓ Local Google SEO</span>
+                        <span class="p-2 rounded bg-slate-50 border border-slate-100">✓ Social Media Marketing</span>
+                        <span class="p-2 rounded bg-slate-50 border border-slate-100">✓ Bulk Lead Gen & SMS</span>
+                    </div>
+                    <div class="mt-5 pt-4 border-t border-slate-100 flex justify-between items-center text-xs">
+                        <span class="text-gold-700 font-bold">Paperless 2-Hour e-KYC</span>
+                        <button onclick="openApplyModal('Digital Marketing G2C')" class="font-bold text-slate-900 hover:text-gold-600 transition">Know More →</button>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
 
-    <!-- Core Solutions Grid -->
-    <section id="solutions" class="py-24 bg-pearl border-b border-slate-200/60">
+    <!-- AGS Seva Kendra (ASK) Showcase (MOS-World MSK Reference) -->
+    <section id="seva-kendra" class="py-24 bg-white border-b border-slate-200/60 overflow-hidden">
         <div class="max-w-7xl mx-auto px-6">
-            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
-                <span class="text-xs uppercase tracking-[0.3em] font-bold text-gold-600 block">The AGS Architecture</span>
-                <h2 class="font-serif text-3xl sm:text-4xl font-extrabold text-slate-900">
-                    Engineered for Exceptional Capital Requirements
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                
+                <div class="lg:col-span-6 space-y-6">
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full border border-gold-300 bg-gold-50 text-gold-900 text-xs font-bold uppercase tracking-wider">
+                        ★ Franchising Opportunity
+                    </div>
+                    <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 leading-tight">
+                        Setup An AGS Seva Kendra (ASK)
+                    </h2>
+                    <p class="text-base text-slate-600 leading-relaxed">
+                        <strong>AGS Seva Kendra (ASK)</strong> is an exclusive initiative by AGS Corporation that provides a fantastic business opportunity through franchising. Our motto, <em>"One Pin Code, One Agent,"</em> guarantees that each area has its own dedicated center.
+                    </p>
+
+                    <div class="space-y-3 pt-2">
+                        <div class="p-4 rounded-xl border border-slate-100 bg-pearl">
+                            <h4 class="font-bold text-slate-900 text-sm">One Pin Code One Kendra Policy</h4>
+                            <p class="text-xs text-slate-500 mt-0.5">Exclusive geographical territory protects your customer base and footfall.</p>
+                        </div>
+                        <div class="p-4 rounded-xl border border-slate-100 bg-pearl">
+                            <h4 class="font-bold text-slate-900 text-sm">Complete Hardware & Branded Store Kit</h4>
+                            <p class="text-xs text-slate-500 mt-0.5">Includes Biometric Fingerprint Scanner, Micro-ATM Machine, and Branded Signboards.</p>
+                        </div>
+                        <div class="p-4 rounded-xl border border-slate-100 bg-pearl">
+                            <h4 class="font-bold text-slate-900 text-sm">Enhanced Commission Slabs</h4>
+                            <p class="text-xs text-slate-500 mt-0.5">Enjoy higher tiered payouts across banking, ticket bookings, and bill payments.</p>
+                        </div>
+                    </div>
+
+                    <div class="pt-4 flex flex-wrap gap-4">
+                        <button onclick="openApplyModal('AGS Seva Kendra')" class="px-7 py-3.5 rounded-xl gold-gradient-bg text-slate-950 font-bold text-xs uppercase tracking-widest shadow-gold-glow hover:scale-105 transition">
+                            Know More About (ASK) Opportunity
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Right Feature Presentation -->
+                <div class="lg:col-span-6">
+                    <div class="bg-gradient-to-br from-gold-50 via-white to-gold-100/40 p-8 sm:p-10 rounded-3xl border border-gold-300 shadow-xl space-y-6">
+                        <div class="flex items-center justify-between border-b border-gold-200 pb-4">
+                            <div>
+                                <span class="text-xs font-bold uppercase tracking-wider text-gold-700 block">Franchise Structure</span>
+                                <h3 class="text-2xl font-extrabold text-slate-900">AGS Seva Kendra</h3>
+                            </div>
+                            <span class="px-3 py-1 bg-gold-500 text-slate-950 font-bold text-xs rounded-full">
+                                Exclusive
+                            </span>
+                        </div>
+
+                        <div class="space-y-3 text-xs">
+                            <div class="flex justify-between items-center p-3 bg-white rounded-xl border border-slate-100">
+                                <span class="font-semibold text-slate-700">Territory Allocation:</span>
+                                <span class="font-bold text-slate-900">1 Kendra Per Pincode</span>
+                            </div>
+                            <div class="flex justify-between items-center p-3 bg-white rounded-xl border border-slate-100">
+                                <span class="font-semibold text-slate-700">Expected Monthly Returns:</span>
+                                <span class="font-bold text-gold-700">₹40,000 – ₹1,00,000+</span>
+                            </div>
+                            <div class="flex justify-between items-center p-3 bg-white rounded-xl border border-slate-100">
+                                <span class="font-semibold text-slate-700">Storefront Setup Time:</span>
+                                <span class="font-bold text-slate-900">Within 48 Hours</span>
+                            </div>
+                            <div class="flex justify-between items-center p-3 bg-white rounded-xl border border-slate-100">
+                                <span class="font-semibold text-slate-700">Corporate Backing:</span>
+                                <span class="font-bold text-slate-900">AGS Corporation Ltd</span>
+                            </div>
+                        </div>
+
+                        <div class="p-4 rounded-xl bg-white border border-gold-200 text-xs text-slate-600 leading-relaxed">
+                            "Our Seva Kendra model focuses on providing financial services to communities. It's a simple yet innovative concept that empowers individuals to become digital banking champions in their own neighborhoods."
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Partner With Us (Agent, Distributor, Master Distributor - Direct MOS World structure) -->
+    <section id="partnerships" class="py-24 bg-pearl border-b border-slate-200/60">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+                <span class="text-xs uppercase tracking-[0.3em] font-bold text-gold-600 block">Collaborate & Succeed with AGS</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900">
+                    Business Opportunities For Everyone
                 </h2>
-                <p class="text-slate-600 font-light text-base sm:text-lg">
-                    Traditional banking fragments your assets across slow intermediaries. AGS Corporation unites everything into a singular institutional command plane.
+                <p class="text-slate-600 text-sm sm:text-base">
+                    AGS Corporation offers unparalleled business prospects for diverse segments including shopkeepers, retailers, students, housewives, professionals, and insurance agents.
                 </p>
             </div>
 
             <div class="grid md:grid-cols-3 gap-8">
-                <!-- Card 1 -->
-                <div class="bg-white rounded-2xl p-8 border border-slate-200/80 hover:border-gold-300 shadow-sm hover:shadow-card-hover hover:-translate-y-1 transition duration-300 group">
-                    <div class="w-14 h-14 rounded-xl bg-gold-50 border border-gold-200 flex items-center justify-center mb-6 group-hover:bg-gold-500 group-hover:text-white transition duration-300 text-gold-600">
-                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                
+                <!-- 1. AGS Agent -->
+                <div class="bg-white rounded-2xl p-7 border border-slate-200 hover:border-gold-300 shadow-sm hover:shadow-card-hover transition duration-300 flex flex-col justify-between">
+                    <div>
+                        <div class="w-10 h-10 rounded-lg bg-gold-100 text-gold-800 font-bold flex items-center justify-center text-sm mb-4">
+                            01
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-1">Become an AGS Agent</h3>
+                        <span class="text-xs font-bold text-gold-600 block mb-3">Rewards Exceeding ₹20,000 / month</span>
+                        <p class="text-xs text-slate-600 leading-relaxed mb-4">
+                            Elevate your journey by becoming an AGS Agent. Join our extensive network of 1,75,000 partners and turn your store into a digital powerhouse.
+                        </p>
+                        <h4 class="text-xs font-bold text-slate-900 uppercase tracking-wider mb-2">Suitable Categories:</h4>
+                        <div class="flex flex-wrap gap-1.5 text-[11px] text-slate-600 mb-6">
+                            <span class="px-2 py-1 rounded bg-slate-50 border">Kirana Shop</span>
+                            <span class="px-2 py-1 rounded bg-slate-50 border">Medical Store</span>
+                            <span class="px-2 py-1 rounded bg-slate-50 border">Mobile Recharge</span>
+                            <span class="px-2 py-1 rounded bg-slate-50 border">Hardware Store</span>
+                            <span class="px-2 py-1 rounded bg-slate-50 border">Travel Agency</span>
+                            <span class="px-2 py-1 rounded bg-slate-50 border">Housewives & Students</span>
+                        </div>
                     </div>
-                    <h3 class="font-serif text-xl font-bold text-slate-900 mb-3">Multi-Currency Global Treasury</h3>
-                    <p class="text-sm text-slate-600 leading-relaxed mb-6">
-                        Seamlessly hold, convert, and wire across 54 sovereign currencies with sub-second SWIFT gpi & instant real-time gross settlement (RTGS).
-                    </p>
-                    <ul class="space-y-2 text-xs text-slate-500 font-medium">
-                        <li class="flex items-center gap-2">
-                            <span class="text-gold-600">✦</span> Direct central bank liquidity rails
-                        </li>
-                        <li class="flex items-center gap-2">
-                            <span class="text-gold-600">✦</span> Automated FX slippage mitigation
-                        </li>
-                        <li class="flex items-center gap-2">
-                            <span class="text-gold-600">✦</span> No restrictive daily transfer thresholds
-                        </li>
-                    </ul>
+                    <button onclick="openApplyModal('AGS Agent')" class="w-full py-3 rounded-xl gold-gradient-bg text-slate-950 font-bold text-xs uppercase tracking-wider hover:brightness-105 transition shadow">
+                        Join as an AGS Agent
+                    </button>
                 </div>
 
-                <!-- Card 2 -->
-                <div class="bg-white rounded-2xl p-8 border border-slate-200/80 hover:border-gold-300 shadow-sm hover:shadow-card-hover hover:-translate-y-1 transition duration-300 group">
-                    <div class="w-14 h-14 rounded-xl bg-gold-50 border border-gold-200 flex items-center justify-center mb-6 group-hover:bg-gold-500 group-hover:text-white transition duration-300 text-gold-600">
-                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+                <!-- 2. AGS Distributor -->
+                <div class="bg-white rounded-2xl p-7 border border-slate-200 hover:border-gold-300 shadow-sm hover:shadow-card-hover transition duration-300 flex flex-col justify-between">
+                    <div>
+                        <div class="w-10 h-10 rounded-lg bg-gold-100 text-gold-800 font-bold flex items-center justify-center text-sm mb-4">
+                            02
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-1">Become an AGS Distributor</h3>
+                        <span class="text-xs font-bold text-gold-600 block mb-3">Earnings Exceeding ₹25,000 / month</span>
+                        <p class="text-xs text-slate-600 leading-relaxed mb-4">
+                            Step into the role of an AGS Distributor and build a network of retail agents. Unlock continuous passive commission on every transaction conducted in your area.
+                        </p>
+                        <h4 class="text-xs font-bold text-slate-900 uppercase tracking-wider mb-2">Suitable Categories:</h4>
+                        <div class="flex flex-wrap gap-1.5 text-[11px] text-slate-600 mb-6">
+                            <span class="px-2 py-1 rounded bg-slate-50 border">Telecom Distributors</span>
+                            <span class="px-2 py-1 rounded bg-slate-50 border">Pharma Distributors</span>
+                            <span class="px-2 py-1 rounded bg-slate-50 border">Retail Wholesalers</span>
+                            <span class="px-2 py-1 rounded bg-slate-50 border">FMCG Distributors</span>
+                        </div>
                     </div>
-                    <h3 class="font-serif text-xl font-bold text-slate-900 mb-3">Bankruptcy-Remote Segregated Custody</h3>
-                    <p class="text-sm text-slate-600 leading-relaxed mb-6">
-                        Your capital never touches a commercial bank's risky balance sheet. Assets reside in 100% off-balance-sheet statutory bankruptcy-protected trusts.
-                    </p>
-                    <ul class="space-y-2 text-xs text-slate-500 font-medium">
-                        <li class="flex items-center gap-2">
-                            <span class="text-gold-600">✦</span> Lloyd's of London syndicated insurance
-                        </li>
-                        <li class="flex items-center gap-2">
-                            <span class="text-gold-600">✦</span> Hardware Security Module (HSM) multi-signature
-                        </li>
-                        <li class="flex items-center gap-2">
-                            <span class="text-gold-600">✦</span> Daily independent third-party attestations
-                        </li>
-                    </ul>
+                    <button onclick="openApplyModal('AGS Distributor')" class="w-full py-3 rounded-xl border border-gold-300 text-slate-800 hover:bg-gold-500 hover:text-white font-bold text-xs uppercase tracking-wider transition">
+                        Join as AGS Distributor
+                    </button>
                 </div>
 
-                <!-- Card 3 -->
-                <div class="bg-white rounded-2xl p-8 border border-slate-200/80 hover:border-gold-300 shadow-sm hover:shadow-card-hover hover:-translate-y-1 transition duration-300 group">
-                    <div class="w-14 h-14 rounded-xl bg-gold-50 border border-gold-200 flex items-center justify-center mb-6 group-hover:bg-gold-500 group-hover:text-white transition duration-300 text-gold-600">
-                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                <!-- 3. AGS Master Distributor -->
+                <div class="bg-white rounded-2xl p-7 border border-slate-200 hover:border-gold-300 shadow-sm hover:shadow-card-hover transition duration-300 flex flex-col justify-between">
+                    <div>
+                        <div class="w-10 h-10 rounded-lg bg-gold-100 text-gold-800 font-bold flex items-center justify-center text-sm mb-4">
+                            03
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-1">AGS Master Distributor</h3>
+                        <span class="text-xs font-bold text-gold-600 block mb-3">Earnings Surpassing ₹50,000 / month</span>
+                        <p class="text-xs text-slate-600 leading-relaxed mb-4">
+                            Elevate your status as an AGS Master Distributor. Connect with an extensive district network, cultivate your team, and enjoy highest override slabs.
+                        </p>
+                        <h4 class="text-xs font-bold text-slate-900 uppercase tracking-wider mb-2">Suitable Categories:</h4>
+                        <div class="flex flex-wrap gap-1.5 text-[11px] text-slate-600 mb-6">
+                            <span class="px-2 py-1 rounded bg-slate-50 border">Griha Udyog Members</span>
+                            <span class="px-2 py-1 rounded bg-slate-50 border">Self Help Groups (SHG)</span>
+                            <span class="px-2 py-1 rounded bg-slate-50 border">Teachers & Officers</span>
+                            <span class="px-2 py-1 rounded bg-slate-50 border">Corporate Sales Leaders</span>
+                        </div>
                     </div>
-                    <h3 class="font-serif text-xl font-bold text-slate-900 mb-3">Algorithmic Yield & Private Debt</h3>
-                    <p class="text-sm text-slate-600 leading-relaxed mb-6">
-                        Put idle institutional cash balances to work. Deploy directly into collateralized asset-backed notes, reverse repos, and prime money markets.
-                    </p>
-                    <ul class="space-y-2 text-xs text-slate-500 font-medium">
-                        <li class="flex items-center gap-2">
-                            <span class="text-gold-600">✦</span> Automated sweep accounts with daily compounding
-                        </li>
-                        <li class="flex items-center gap-2">
-                            <span class="text-gold-600">✦</span> Real-time liquidity without lockup penalties
-                        </li>
-                        <li class="flex items-center gap-2">
-                            <span class="text-gold-600">✦</span> Customized risk-adjusted yield profiles
-                        </li>
-                    </ul>
+                    <button onclick="openApplyModal('Master Distributor')" class="w-full py-3 rounded-xl border border-gold-300 text-slate-800 hover:bg-gold-500 hover:text-white font-bold text-xs uppercase tracking-wider transition">
+                        Join as Master Distributor
+                    </button>
                 </div>
+
             </div>
         </div>
     </section>
 
-    <!-- The AGS Sovereign Metal Card Showcase -->
-    <section id="cards" class="py-24 bg-white border-b border-slate-200/60 overflow-hidden">
+    <!-- Why Choose AGS Corporation (MOS-World "Discover the Difference" Reference) -->
+    <section id="why-us" class="py-24 bg-white border-b border-slate-200/60">
         <div class="max-w-7xl mx-auto px-6">
-            <div class="grid lg:grid-cols-12 gap-12 items-center">
-                <!-- Card Visual Mockup -->
-                <div class="lg:col-span-6 flex justify-center order-2 lg:order-1">
-                    <div class="relative w-full max-w-md perspective-1000 group">
-                        <!-- Card background shadow glow -->
-                        <div class="absolute -inset-4 bg-gradient-to-r from-gold-400 via-amber-300 to-yellow-500 rounded-3xl blur-xl opacity-25 group-hover:opacity-40 transition duration-500"></div>
-
-                        <!-- 28g Solid Titanium Physical Card Simulation -->
-                        <div class="relative aspect-[1.586/1] w-full rounded-2xl bg-gradient-to-br from-slate-900 via-onyx-800 to-black p-8 text-white shadow-2xl border border-gold-400/40 flex flex-col justify-between overflow-hidden transition-transform duration-500 group-hover:rotate-1 group-hover:scale-105">
-                            <!-- Brushed metal luster effect -->
-                            <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-white/10 via-transparent to-transparent pointer-events-none"></div>
-                            <div class="absolute -right-20 -bottom-20 w-64 h-64 border border-gold-400/10 rounded-full pointer-events-none"></div>
-
-                            <!-- Card Header -->
-                            <div class="flex justify-between items-start z-10">
-                                <div>
-                                    <span class="font-serif tracking-[0.25em] text-sm text-gold-300 font-bold block">AGS CORPORATION</span>
-                                    <span class="text-[9px] uppercase tracking-widest text-slate-400">SOVEREIGN RESERVE</span>
-                                </div>
-                                <div class="w-12 h-9 rounded-md metallic-chip border border-gold-200 shadow-inner flex items-center justify-center">
-                                    <div class="w-8 h-5 border border-amber-900/40 rounded-sm"></div>
-                                </div>
-                            </div>
-
-                            <!-- Card Number Mockup -->
-                            <div class="z-10 my-auto">
-                                <span class="font-mono tracking-[0.22em] text-lg sm:text-xl text-slate-200 drop-shadow">4920 •••• •••• 8802</span>
-                            </div>
-
-                            <!-- Card Footer -->
-                            <div class="flex justify-between items-end z-10">
-                                <div>
-                                    <span class="text-[8px] uppercase tracking-widest text-gold-400/80 block">AUTHORIZED MEMBER</span>
-                                    <span class="font-serif tracking-widest text-xs font-semibold text-white">V. STERLING CHEN</span>
-                                </div>
-                                <div class="text-right">
-                                    <span class="text-[8px] uppercase tracking-widest text-slate-400 block">TIER</span>
-                                    <span class="font-serif tracking-widest text-xs font-bold text-gold-400">OBSIDIAN 28G</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Card Details Copy -->
-                <div class="lg:col-span-6 space-y-6 order-1 lg:order-2">
-                    <span class="text-xs uppercase tracking-[0.3em] font-bold text-gold-600 block">Unrestricted Global Liquidity</span>
-                    <h2 class="font-serif text-3xl sm:text-4xl font-extrabold text-slate-900 leading-tight">
-                        The AGS Sovereign Card: Crafted in 28g Solid Titanium
-                    </h2>
-                    <p class="text-slate-600 text-base leading-relaxed">
-                        Engineered for principals who refuse arbitrary transaction limits. Direct access to your multi-asset liquidity pool anywhere Mastercard® and private banking terminals are accepted.
-                    </p>
-
-                    <div class="grid grid-cols-2 gap-4 pt-2">
-                        <div class="border border-slate-200 rounded-xl p-4 bg-pearl">
-                            <span class="font-serif font-bold text-slate-900 text-lg block">$1,000,000</span>
-                            <span class="text-xs text-slate-500">Daily ATM & Wire Ceiling</span>
-                        </div>
-                        <div class="border border-slate-200 rounded-xl p-4 bg-pearl">
-                            <span class="font-serif font-bold text-slate-900 text-lg block">0% FX Fees</span>
-                            <span class="text-xs text-slate-500">Institutional Interbank Rate</span>
-                        </div>
-                        <div class="border border-slate-200 rounded-xl p-4 bg-pearl">
-                            <span class="font-serif font-bold text-slate-900 text-lg block">24/7 Dedicated</span>
-                            <span class="text-xs text-slate-500">Private Client Attaché</span>
-                        </div>
-                        <div class="border border-slate-200 rounded-xl p-4 bg-pearl">
-                            <span class="font-serif font-bold text-slate-900 text-lg block">Worldwide</span>
-                            <span class="text-xs text-slate-500">Private Aviation & Marine Concierge</span>
-                        </div>
-                    </div>
-
-                    <div class="pt-2">
-                        <button onclick="openContactModal()" class="px-6 py-3 rounded-lg border border-gold-400 text-gold-800 bg-gold-50/60 hover:bg-gold-100 font-semibold text-xs uppercase tracking-wider transition">
-                            Inquire for Card Allocation
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Interactive Yield & Liquidity Calculator -->
-    <section id="simulator" class="py-24 bg-pearl border-b border-slate-200/60">
-        <div class="max-w-5xl mx-auto px-6">
-            <div class="text-center mb-12 space-y-3">
-                <span class="text-xs uppercase tracking-[0.3em] font-bold text-gold-600 block">Dynamic Capital Allocation</span>
-                <h2 class="font-serif text-3xl sm:text-4xl font-extrabold text-slate-900">
-                    Institutional Yield Model Simulator
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+                <span class="text-xs uppercase tracking-[0.3em] font-bold text-gold-600 block">The Competitive Edge</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900">
+                    Discover the Difference with AGS Corporation!
                 </h2>
-                <p class="text-slate-600 text-sm max-w-xl mx-auto">
-                    Adjust your deployable treasury capital to calculate estimated annualized returns through AGS algorithmic liquidity routing.
+                <p class="text-slate-600 text-sm sm:text-base">
+                    We bring together technological innovation, a dedicated team, and a customer-first approach to provide seamless services tailored to your needs.
                 </p>
             </div>
 
-            <div class="bg-white rounded-3xl border border-gold-200/80 p-8 sm:p-12 shadow-luxury">
+            <div class="grid grid-cols-2 md:grid-cols-5 gap-4 text-center">
+                <div class="p-5 rounded-2xl bg-pearl border border-slate-100 hover:border-gold-300 transition">
+                    <div class="w-12 h-12 rounded-full bg-gold-50 text-gold-700 flex items-center justify-center font-bold mx-auto mb-3 text-lg">★</div>
+                    <h4 class="font-bold text-slate-900 text-sm mb-1">Proven Excellence</h4>
+                    <p class="text-[11px] text-slate-400">Industry-leading trust and reliability.</p>
+                </div>
+
+                <div class="p-5 rounded-2xl bg-pearl border border-slate-100 hover:border-gold-300 transition">
+                    <div class="w-12 h-12 rounded-full bg-gold-50 text-gold-700 flex items-center justify-center font-bold mx-auto mb-3 text-lg">⚡</div>
+                    <h4 class="font-bold text-slate-900 text-sm mb-1">Cutting-Edge Tech</h4>
+                    <p class="text-[11px] text-slate-400">99.98% instant transaction settlement.</p>
+                </div>
+
+                <div class="p-5 rounded-2xl bg-pearl border border-slate-100 hover:border-gold-300 transition">
+                    <div class="w-12 h-12 rounded-full bg-gold-50 text-gold-700 flex items-center justify-center font-bold mx-auto mb-3 text-lg">👥</div>
+                    <h4 class="font-bold text-slate-900 text-sm mb-1">Customer Centric</h4>
+                    <p class="text-[11px] text-slate-400">Doorstep field officer guidance.</p>
+                </div>
+
+                <div class="p-5 rounded-2xl bg-pearl border border-slate-100 hover:border-gold-300 transition">
+                    <div class="w-12 h-12 rounded-full bg-gold-50 text-gold-700 flex items-center justify-center font-bold mx-auto mb-3 text-lg">🛡</div>
+                    <h4 class="font-bold text-slate-900 text-sm mb-1">Reliability</h4>
+                    <p class="text-[11px] text-slate-400">Secure wallet and immediate settlement.</p>
+                </div>
+
+                <div class="p-5 rounded-2xl bg-pearl border border-slate-100 hover:border-gold-300 transition">
+                    <div class="w-12 h-12 rounded-full bg-gold-50 text-gold-700 flex items-center justify-center font-bold mx-auto mb-3 text-lg">📦</div>
+                    <h4 class="font-bold text-slate-900 text-sm mb-1">Comprehensive Suite</h4>
+                    <p class="text-[11px] text-slate-400">50+ multi-utilities under one roof.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Income Calculator (MOS World Reference Feature) -->
+    <section id="calculator" class="py-24 bg-pearl border-b border-slate-200/60">
+        <div class="max-w-5xl mx-auto px-6">
+            <div class="text-center mb-12 space-y-3">
+                <span class="text-xs uppercase tracking-[0.3em] font-bold text-gold-600 block">Transparent Business Growth</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900">
+                    Agent Income Calculator
+                </h2>
+                <p class="text-slate-600 text-sm max-w-xl mx-auto">
+                    Simulate your projected monthly earnings based on average daily transactions performed at your counter.
+                </p>
+            </div>
+
+            <div class="bg-white rounded-3xl border border-gold-200/90 p-8 sm:p-12 shadow-luxury">
                 <div class="grid md:grid-cols-12 gap-8 items-center">
-                    <!-- Left Slider Controls -->
-                    <div class="md:col-span-7 space-y-8">
+                    
+                    <!-- Left: Sliders -->
+                    <div class="md:col-span-7 space-y-6">
+                        
+                        <!-- AEPS / ATM Transactions Slider -->
                         <div>
                             <div class="flex justify-between items-center mb-2">
-                                <label class="text-xs uppercase tracking-wider font-bold text-slate-700">Deployable Capital (USD)</label>
-                                <span id="capitalDisplay" class="font-serif text-2xl font-bold text-gold-700">$5,000,000</span>
+                                <label class="text-xs uppercase tracking-wider font-bold text-slate-700">Daily Cash Withdrawals (AEPS / M-ATM)</label>
+                                <span id="aepsDisplay" class="font-mono text-sm font-bold text-gold-700">20 / day</span>
                             </div>
-                            <input id="capitalSlider" type="range" min="1000000" max="50000000" step="500000" value="5000000" class="w-full h-2.5 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-gold-500">
-                            <div class="flex justify-between text-[11px] text-slate-400 mt-2 font-mono">
-                                <span>$1,000,000</span>
-                                <span>$25,000,000</span>
-                                <span>$50,000,000+</span>
+                            <input id="aepsSlider" type="range" min="0" max="100" step="5" value="20" class="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-gold-500">
+                            <div class="flex justify-between text-[10px] text-slate-400 mt-1 font-mono">
+                                <span>0</span>
+                                <span>50</span>
+                                <span>100+</span>
                             </div>
                         </div>
 
+                        <!-- Money Transfers Slider -->
                         <div>
                             <div class="flex justify-between items-center mb-2">
-                                <label class="text-xs uppercase tracking-wider font-bold text-slate-700">Strategy Risk Tolerance</label>
-                                <span id="strategyDisplay" class="text-xs font-semibold text-slate-800 bg-slate-100 px-3 py-1 rounded-full">Sovereign Prime (5.8% APY)</span>
+                                <label class="text-xs uppercase tracking-wider font-bold text-slate-700">Daily Money Transfers (DMT)</label>
+                                <span id="dmtDisplay" class="font-mono text-sm font-bold text-gold-700">15 / day</span>
                             </div>
-                            <div class="grid grid-cols-3 gap-3">
-                                <button onclick="setStrategy(1)" id="strat1" class="strategy-btn py-2.5 px-2 text-xs font-semibold rounded-lg border border-gold-500 bg-gold-50 text-gold-900 transition">
-                                    Sovereign Prime
-                                </button>
-                                <button onclick="setStrategy(2)" id="strat2" class="strategy-btn py-2.5 px-2 text-xs font-semibold rounded-lg border border-slate-200 bg-white text-slate-600 hover:border-gold-300 transition">
-                                    Dynamic Treasury
-                                </button>
-                                <button onclick="setStrategy(3)" id="strat3" class="strategy-btn py-2.5 px-2 text-xs font-semibold rounded-lg border border-slate-200 bg-white text-slate-600 hover:border-gold-300 transition">
-                                    Structured Credit
-                                </button>
+                            <input id="dmtSlider" type="range" min="0" max="80" step="5" value="15" class="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-gold-500">
+                            <div class="flex justify-between text-[10px] text-slate-400 mt-1 font-mono">
+                                <span>0</span>
+                                <span>40</span>
+                                <span>80+</span>
                             </div>
                         </div>
+
+                        <!-- Bill & Utility Payments Slider -->
+                        <div>
+                            <div class="flex justify-between items-center mb-2">
+                                <label class="text-xs uppercase tracking-wider font-bold text-slate-700">Daily Bill Payments & Recharges (BBPS)</label>
+                                <span id="bbpsDisplay" class="font-mono text-sm font-bold text-gold-700">30 / day</span>
+                            </div>
+                            <input id="bbpsSlider" type="range" min="0" max="150" step="10" value="30" class="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-gold-500">
+                            <div class="flex justify-between text-[10px] text-slate-400 mt-1 font-mono">
+                                <span>0</span>
+                                <span>75</span>
+                                <span>150+</span>
+                            </div>
+                        </div>
+
+                        <!-- Tickets / IRCTC Slider -->
+                        <div>
+                            <div class="flex justify-between items-center mb-2">
+                                <label class="text-xs uppercase tracking-wider font-bold text-slate-700">Daily Rail / Flight / Bus Bookings</label>
+                                <span id="travelDisplay" class="font-mono text-sm font-bold text-gold-700">5 / day</span>
+                            </div>
+                            <input id="travelSlider" type="range" min="0" max="30" step="2" value="5" class="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-gold-500">
+                            <div class="flex justify-between text-[10px] text-slate-400 mt-1 font-mono">
+                                <span>0</span>
+                                <span>15</span>
+                                <span>30+</span>
+                            </div>
+                        </div>
+
                     </div>
 
-                    <!-- Right Results Display Card -->
-                    <div class="md:col-span-5 bg-gradient-to-br from-slate-900 via-onyx-800 to-black text-white p-7 rounded-2xl border border-gold-400/40 space-y-6">
+                    <!-- Right: Results Card (Luxurious White & Gold Theme) -->
+                    <div class="md:col-span-5 bg-gradient-to-br from-gold-50 via-white to-gold-100/50 p-7 rounded-2xl border-2 border-gold-300 shadow-md space-y-6">
                         <div>
-                            <span class="text-[10px] uppercase tracking-widest text-gold-400 block font-semibold">ESTIMATED ANNUAL YIELD</span>
-                            <span id="annualYieldDisplay" class="font-serif text-3xl font-extrabold text-white block mt-1">$290,000</span>
-                            <span class="text-[11px] text-slate-400">Paid out on a monthly compounding schedule</span>
+                            <span class="text-[10px] uppercase tracking-widest text-gold-700 block font-bold">ESTIMATED MONTHLY COMMISSION</span>
+                            <span id="monthlyIncomeDisplay" class="text-3xl sm:text-4xl font-extrabold text-slate-900 block mt-1">₹31,500</span>
+                            <span class="text-[11px] text-slate-500">Directly settled to your registered bank account</span>
                         </div>
 
-                        <div class="pt-4 border-t border-slate-700/60 space-y-2.5 text-xs">
+                        <div class="pt-4 border-t border-gold-200/80 space-y-2.5 text-xs">
                             <div class="flex justify-between">
-                                <span class="text-slate-400">Net Effective Rate:</span>
-                                <span id="apyRateDisplay" class="font-mono font-bold text-gold-300">5.80% APY</span>
+                                <span class="text-slate-600">Annual Projected Income:</span>
+                                <span id="annualIncomeDisplay" class="font-mono font-bold text-gold-800">₹3,78,000 / yr</span>
                             </div>
                             <div class="flex justify-between">
-                                <span class="text-slate-400">Monthly Cashflow:</span>
-                                <span id="monthlyCashflowDisplay" class="font-mono text-white">$24,166</span>
+                                <span class="text-slate-600">Settlement Timeline:</span>
+                                <span class="text-emerald-700 font-bold">Instant (T+0)</span>
                             </div>
                             <div class="flex justify-between">
-                                <span class="text-slate-400">Liquidity Settlement:</span>
-                                <span class="text-emerald-400 font-medium">T+0 Same Day</span>
+                                <span class="text-slate-600">Corporate Platform:</span>
+                                <span class="text-slate-900 font-semibold">AGS Corporation</span>
                             </div>
                         </div>
 
-                        <button onclick="openContactModal()" class="w-full py-3 rounded-lg gold-gradient-bg text-slate-950 font-bold text-xs uppercase tracking-widest hover:brightness-105 transition">
-                            Lock In Allocation
+                        <button onclick="openApplyModal('From Income Calculator')" class="w-full py-3.5 rounded-lg gold-gradient-bg text-slate-950 font-bold text-xs uppercase tracking-widest hover:brightness-105 transition shadow">
+                            Start Earning Today
                         </button>
                     </div>
+
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Institutional Governance & Compliance Section -->
-    <section id="governance" class="py-24 bg-white border-b border-slate-200/60">
+    <!-- Institutional Partners Section (MOS World Reference) -->
+    <section class="py-14 bg-white border-b border-slate-200/60">
         <div class="max-w-7xl mx-auto px-6">
-            <div class="grid lg:grid-cols-12 gap-12 items-center">
-                <div class="lg:col-span-5 space-y-4">
-                    <span class="text-xs uppercase tracking-[0.3em] font-bold text-gold-600 block">Fortress Grade Infrastructure</span>
-                    <h2 class="font-serif text-3xl sm:text-4xl font-extrabold text-slate-900">
-                        Institutional Trust, Rigorously Audited.
-                    </h2>
-                    <p class="text-slate-600 text-sm leading-relaxed">
-                        AGS Corporation adheres to Tier-1 international regulatory frameworks, ensuring complete legal and financial insulation for private family offices and multinational enterprises.
-                    </p>
-                </div>
-
-                <div class="lg:col-span-7 grid sm:grid-cols-2 gap-6">
-                    <div class="border border-slate-200 rounded-xl p-6 bg-pearl">
-                        <div class="w-10 h-10 rounded-lg bg-gold-100/70 text-gold-700 flex items-center justify-center font-bold text-sm mb-4">
-                            SOC
-                        </div>
-                        <h4 class="font-serif font-bold text-slate-900 text-base mb-1">SOC 2 Type II Certified</h4>
-                        <p class="text-xs text-slate-500 leading-relaxed">
-                            Continuous real-time continuous audits governing confidential data and fiduciary controls.
-                        </p>
-                    </div>
-
-                    <div class="border border-slate-200 rounded-xl p-6 bg-pearl">
-                        <div class="w-10 h-10 rounded-lg bg-gold-100/70 text-gold-700 flex items-center justify-center font-bold text-sm mb-4">
-                            ISO
-                        </div>
-                        <h4 class="font-serif font-bold text-slate-900 text-base mb-1">ISO 27001 & 27701</h4>
-                        <p class="text-xs text-slate-500 leading-relaxed">
-                            Certified information security architecture across all cryptographic vault clusters.
-                        </p>
-                    </div>
-
-                    <div class="border border-slate-200 rounded-xl p-6 bg-pearl">
-                        <div class="w-10 h-10 rounded-lg bg-gold-100/70 text-gold-700 flex items-center justify-center font-bold text-sm mb-4">
-                            SEC
-                        </div>
-                        <h4 class="font-serif font-bold text-slate-900 text-base mb-1">FINRA & SEC Frameworks</h4>
-                        <p class="text-xs text-slate-500 leading-relaxed">
-                            Institutional clearing and liquidity pathways routed through registered US and Swiss partners.
-                        </p>
-                    </div>
-
-                    <div class="border border-slate-200 rounded-xl p-6 bg-pearl">
-                        <div class="w-10 h-10 rounded-lg bg-gold-100/70 text-gold-700 flex items-center justify-center font-bold text-sm mb-4">
-                            256
-                        </div>
-                        <h4 class="font-serif font-bold text-slate-900 text-base mb-1">Post-Quantum Cryptography</h4>
-                        <p class="text-xs text-slate-500 leading-relaxed">
-                            Hardware security modules protecting authorization key shards with quorum multi-sig.
-                        </p>
-                    </div>
-                </div>
+            <p class="text-center text-[11px] uppercase tracking-[0.3em] font-bold text-slate-400 mb-8">
+                Official Strategic Alliances & Institutional Partners
+            </p>
+            <div class="flex flex-wrap justify-center items-center gap-10 md:gap-14 text-slate-700 font-serif font-bold text-sm tracking-wider opacity-80">
+                <span class="hover:text-gold-600 transition">IRCTC RAILWAYS</span>
+                <span class="hover:text-gold-600 transition">BHARAT BILLPAY (NPCI)</span>
+                <span class="hover:text-gold-600 transition">NSDL PAYMENTS BANK</span>
+                <span class="hover:text-gold-600 transition">ICICI BANK</span>
+                <span class="hover:text-gold-600 transition">AXIS BANK</span>
+                <span class="hover:text-gold-600 transition">AIR INDIA</span>
+                <span class="hover:text-gold-600 transition">INDIGO</span>
+                <span class="hover:text-gold-600 transition">SPICEJET</span>
             </div>
         </div>
     </section>
 
-    <!-- Client Testimonial / Endorsement Carousel -->
-    <section class="py-24 bg-pearl border-b border-slate-200/60">
-        <div class="max-w-4xl mx-auto px-6 text-center space-y-8">
-            <span class="text-xs uppercase tracking-[0.3em] font-bold text-gold-600 block">Privileged Endorsements</span>
-            <div class="font-serif text-2xl sm:text-3xl font-medium text-slate-900 italic leading-relaxed">
-                "AGS Corporation solved what three major Swiss private banks could not: true instant cross-border liquidity without bureaucratic delays, backed by ironclad institutional bankruptcy segregation."
+    <!-- Client / Partner Testimonial -->
+    <section class="py-20 bg-pearl border-b border-slate-200/60">
+        <div class="max-w-4xl mx-auto px-6 text-center space-y-6">
+            <span class="text-xs uppercase tracking-[0.3em] font-bold text-gold-600 block">Hear From Our Partners</span>
+            <div class="text-2xl sm:text-3xl font-medium text-slate-900 italic leading-relaxed">
+                "AGS Corporation transformed my small stationery shop into the busiest digital banking center in my locality. Customer trust was immediate, and my monthly income has doubled."
             </div>
             <div>
-                <span class="font-serif font-bold text-slate-900 block text-lg">Lord Maximilian von Bern</span>
-                <span class="text-xs text-slate-500 uppercase tracking-widest">Managing Principal, Bern & Co. Multi-Family Office (Zurich)</span>
+                <span class="font-bold text-slate-900 block text-lg">Praveen Deshmukh</span>
+                <span class="text-xs text-slate-500 uppercase tracking-widest">Master Distributor, AGS Corporation (Nagpur, Maharashtra)</span>
             </div>
         </div>
     </section>
 
-    <!-- Luxury Invitation CTA Section -->
+    <!-- Main Call to Action -->
     <section class="py-24 bg-white relative overflow-hidden">
-        <div class="max-w-5xl mx-auto px-6 text-center space-y-8 relative z-10">
+        <div class="max-w-4xl mx-auto px-6 text-center space-y-8 relative z-10">
             <div class="w-16 h-16 rounded-2xl gold-gradient-bg mx-auto flex items-center justify-center shadow-lg">
-                <span class="font-serif font-extrabold text-2xl text-slate-950">AGS</span>
+                <span class="font-bold text-2xl text-slate-950">AGS</span>
             </div>
-            <h2 class="font-serif text-4xl sm:text-5xl font-extrabold text-slate-900">
-                Membership by Invitation & Approval
+            <h2 class="text-4xl sm:text-5xl font-extrabold text-slate-900">
+                Join AGS Corporation Today
             </h2>
             <p class="text-slate-600 max-w-xl mx-auto text-base">
-                To maintain bespoke concierge ratios and unparalleled operational security, onboarding is strictly limited to accredited institutional entities and qualified private wealth accounts.
+                Take the leap towards digital entrepreneurship. Become an AGS agent, distributor, or setup your exclusive Seva Kendra franchise.
             </p>
-            <div>
-                <button onclick="openContactModal()" class="px-10 py-5 rounded-xl gold-gradient-bg text-slate-950 font-bold text-sm tracking-widest uppercase shadow-luxury hover:scale-105 transition duration-300">
-                    Apply for Private Onboarding
+            <div class="flex flex-wrap justify-center gap-4">
+                <button onclick="openApplyModal('Direct Signup CTA')" class="px-9 py-4 rounded-xl gold-gradient-bg text-slate-950 font-bold text-xs uppercase tracking-widest shadow-luxury hover:scale-105 transition duration-300">
+                    Apply Now for Partnership
+                </button>
+                <button onclick="openLoginModal()" class="px-8 py-4 rounded-xl border border-slate-300 text-slate-800 font-bold text-xs uppercase tracking-wider hover:bg-slate-50 transition shadow-sm">
+                    Existing Partner Login
                 </button>
             </div>
         </div>
@@ -661,173 +857,255 @@
     <!-- Footer -->
     <footer class="bg-white border-t border-slate-200 text-slate-500 text-xs py-16">
         <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-10">
+            
             <div class="space-y-4">
                 <div class="flex items-center gap-2">
-                    <span class="font-serif font-bold text-base text-slate-900 tracking-wider">AGS CORPORATION</span>
+                    <span class="font-extrabold text-xl text-slate-900">AGS <span class="text-gold-600">Corporation</span></span>
                 </div>
                 <p class="text-[11px] leading-relaxed text-slate-400">
-                    Sovereign-grade financial infrastructure and global liquidity orchestration for high-net-worth families, enterprise treasuries, and institutions.
+                    <strong>AGS Corporation</strong> is a leading digital fintech and assisted e-commerce platform empowering local retail businesses nationwide.
                 </p>
                 <div class="text-[10px] text-slate-400">
-                    © 2026 AGS Corporation Global AG. All rights reserved.
+                    © 2026 AGS Corporation Limited. All rights reserved.
                 </div>
             </div>
 
             <div>
-                <span class="font-serif font-bold text-slate-900 block mb-4 uppercase tracking-wider text-xs">Global Hubs</span>
+                <span class="font-bold text-slate-900 block mb-4 uppercase tracking-wider text-xs">Services</span>
                 <ul class="space-y-2 text-[11px]">
-                    <li>Zurich: Bahnhofstrasse 45</li>
-                    <li>London: 1 Canada Square, Canary Wharf</li>
-                    <li>New York: 200 Park Avenue</li>
-                    <li>Singapore: Marina Bay Financial Centre</li>
+                    <li><a href="#services" class="hover:text-gold-600 transition">AEPS & Micro-ATM Banking</a></li>
+                    <li><a href="#services" class="hover:text-gold-600 transition">IRCTC Railway & Flight Ticketing</a></li>
+                    <li><a href="#services" class="hover:text-gold-600 transition">Bharat BillPay (BBPS) Utilities</a></li>
+                    <li><a href="#services" class="hover:text-gold-600 transition">Motor & Health Insurance</a></li>
+                    <li><a href="#services" class="hover:text-gold-600 transition">Pan-India Courier & Cargo</a></li>
                 </ul>
             </div>
 
             <div>
-                <span class="font-serif font-bold text-slate-900 block mb-4 uppercase tracking-wider text-xs">Solutions</span>
+                <span class="font-bold text-slate-900 block mb-4 uppercase tracking-wider text-xs">Partnership</span>
                 <ul class="space-y-2 text-[11px]">
-                    <li><a href="#solutions" class="hover:text-gold-600 transition">Multi-Currency Treasury</a></li>
-                    <li><a href="#solutions" class="hover:text-gold-600 transition">Segregated Cold Custody</a></li>
-                    <li><a href="#cards" class="hover:text-gold-600 transition">Sovereign Titanium Card</a></li>
-                    <li><a href="#simulator" class="hover:text-gold-600 transition">Algorithmic Yield Simulator</a></li>
+                    <li><a href="#seva-kendra" class="hover:text-gold-600 transition">AGS Seva Kendra (ASK)</a></li>
+                    <li><a href="#partnerships" class="hover:text-gold-600 transition">Become an AGS Agent</a></li>
+                    <li><a href="#partnerships" class="hover:text-gold-600 transition">Distributor Opportunity</a></li>
+                    <li><a href="#partnerships" class="hover:text-gold-600 transition">Master Distributor</a></li>
+                    <li><a href="#calculator" class="hover:text-gold-600 transition">Income Calculator</a></li>
                 </ul>
             </div>
 
             <div>
-                <span class="font-serif font-bold text-slate-900 block mb-4 uppercase tracking-wider text-xs">Regulatory Notice</span>
-                <p class="text-[10px] leading-relaxed text-slate-400">
-                    AGS Corporation operates as a financial technology platform and provides fiduciary routing through chartered banking partners and licensed custodians. Deposits may be protected through statutory deposit insurance with qualifying partner institutions.
+                <span class="font-bold text-slate-900 block mb-4 uppercase tracking-wider text-xs">Corporate & Contact</span>
+                <p class="text-[11px] text-slate-400 leading-relaxed mb-3">
+                    Corporate Office: AGS Corporation Towers, Financial District, Mumbai – 400051.
+                </p>
+                <p class="text-[10px] text-slate-400 leading-relaxed">
+                    Helpline: 1800-419-7700 | support@agscorporation.com
                 </p>
             </div>
+
         </div>
     </footer>
 
-    <!-- Interactive Onboarding Modal -->
-    <div id="contactModal" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
-        <div class="bg-white rounded-2xl max-w-lg w-full border border-gold-200 p-8 shadow-2xl relative animate-in fade-in zoom-in duration-200">
-            <button onclick="closeContactModal()" class="absolute top-5 right-5 text-slate-400 hover:text-slate-800 text-xl font-bold">✕</button>
-            <div class="mb-6">
-                <span class="text-xs uppercase tracking-widest font-bold text-gold-600 block">Private Access Protocol</span>
-                <h3 class="font-serif text-2xl font-bold text-slate-900 mt-1">Request AGS Onboarding</h3>
-                <p class="text-xs text-slate-500 mt-1">Our Senior Wealth Attaché will respond within 4 business hours via encrypted channel.</p>
+    <!-- Interactive Registration / Application Modal -->
+    <div id="applyModal" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-2xl max-w-lg w-full border border-gold-200 p-8 shadow-2xl relative max-h-[90vh] overflow-y-auto">
+            <button onclick="closeApplyModal()" class="absolute top-5 right-5 text-slate-400 hover:text-slate-800 text-xl font-bold">✕</button>
+            <div class="mb-5">
+                <span class="text-xs uppercase tracking-widest font-bold text-gold-600 block">AGS Corporation Partner Onboarding</span>
+                <h3 class="text-2xl font-bold text-slate-900 mt-1">Join AGS Corporation Today</h3>
+                <p class="text-xs text-slate-500 mt-1">Complete your registration to unlock 50+ digital services for your business.</p>
             </div>
-            <form onsubmit="handleContactSubmit(event)" class="space-y-4 text-xs">
+
+            <form onsubmit="handleApplySubmit(event)" class="space-y-4 text-xs">
                 <div>
-                    <label class="block font-semibold text-slate-700 uppercase mb-1">Entity / Principal Full Name</label>
-                    <input type="text" required class="w-full px-3.5 py-2.5 rounded-lg border border-slate-200 focus:border-gold-500 focus:ring-1 focus:ring-gold-500 outline-none text-slate-900" placeholder="e.g. Lord Maximilian / Harrison Family Office">
+                    <label class="block font-semibold text-slate-700 uppercase mb-1">Full Name</label>
+                    <input type="text" required class="w-full px-3.5 py-2.5 rounded-lg border border-slate-200 focus:border-gold-500 focus:ring-1 focus:ring-gold-500 outline-none text-slate-900" placeholder="e.g. Ramesh Kumar Patel">
                 </div>
-                <div>
-                    <label class="block font-semibold text-slate-700 uppercase mb-1">Corporate or Private Email</label>
-                    <input type="email" required class="w-full px-3.5 py-2.5 rounded-lg border border-slate-200 focus:border-gold-500 focus:ring-1 focus:ring-gold-500 outline-none text-slate-900" placeholder="principal@enterprise.com">
+
+                <div class="grid grid-cols-2 gap-3">
+                    <div>
+                        <label class="block font-semibold text-slate-700 uppercase mb-1">Mobile / WhatsApp No.</label>
+                        <input type="tel" required class="w-full px-3.5 py-2.5 rounded-lg border border-slate-200 focus:border-gold-500 focus:ring-1 focus:ring-gold-500 outline-none text-slate-900" placeholder="9876543210">
+                    </div>
+                    <div>
+                        <label class="block font-semibold text-slate-700 uppercase mb-1">Email Address</label>
+                        <input type="email" required class="w-full px-3.5 py-2.5 rounded-lg border border-slate-200 focus:border-gold-500 focus:ring-1 focus:ring-gold-500 outline-none text-slate-900" placeholder="ramesh@store.com">
+                    </div>
                 </div>
+
+                <div class="grid grid-cols-2 gap-3">
+                    <div>
+                        <label class="block font-semibold text-slate-700 uppercase mb-1">State</label>
+                        <select class="w-full px-3.5 py-2.5 rounded-lg border border-slate-200 focus:border-gold-500 outline-none text-slate-900">
+                            <option>Maharashtra</option>
+                            <option>Gujarat</option>
+                            <option>Uttar Pradesh</option>
+                            <option>Bihar</option>
+                            <option>Rajasthan</option>
+                            <option>Madhya Pradesh</option>
+                            <option>West Bengal</option>
+                            <option>Delhi NCR</option>
+                            <option>Karnataka</option>
+                            <option>Other States</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block font-semibold text-slate-700 uppercase mb-1">Pin Code</label>
+                        <input type="text" required class="w-full px-3.5 py-2.5 rounded-lg border border-slate-200 focus:border-gold-500 outline-none text-slate-900" placeholder="e.g. 400001">
+                    </div>
+                </div>
+
                 <div>
-                    <label class="block font-semibold text-slate-700 uppercase mb-1">Anticipated Treasury Volume</label>
-                    <select class="w-full px-3.5 py-2.5 rounded-lg border border-slate-200 focus:border-gold-500 focus:ring-1 focus:ring-gold-500 outline-none text-slate-900">
-                        <option>$1,000,000 - $5,000,000 USD</option>
-                        <option>$5,000,000 - $25,000,000 USD</option>
-                        <option>$25,000,000 - $100,000,000+ USD</option>
+                    <label class="block font-semibold text-slate-700 uppercase mb-1">Interested In Role</label>
+                    <select id="roleSelect" class="w-full px-3.5 py-2.5 rounded-lg border border-slate-200 focus:border-gold-500 outline-none text-slate-900">
+                        <option>AGS Agent</option>
+                        <option>AGS Seva Kendra (Exclusive Franchise)</option>
+                        <option>AGS Distributor</option>
+                        <option>AGS Master Distributor</option>
                     </select>
                 </div>
+
                 <div>
-                    <label class="block font-semibold text-slate-700 uppercase mb-1">Primary Jurisdiction</label>
-                    <input type="text" class="w-full px-3.5 py-2.5 rounded-lg border border-slate-200 focus:border-gold-500 focus:ring-1 focus:ring-gold-500 outline-none text-slate-900" placeholder="e.g. Switzerland / United Kingdom / Singapore">
+                    <label class="block font-semibold text-slate-700 uppercase mb-1">Your Store / Business Type</label>
+                    <select class="w-full px-3.5 py-2.5 rounded-lg border border-slate-200 focus:border-gold-500 outline-none text-slate-900">
+                        <option>Kirana / Grocery Store</option>
+                        <option>Mobile Recharge & Electronics</option>
+                        <option>Medical Store / Chemist</option>
+                        <option>Cyber Cafe / Stationery</option>
+                        <option>Travel Agency</option>
+                        <option>Student / Housewife / New Entrepreneur</option>
+                    </select>
                 </div>
+
                 <div class="pt-2">
                     <button type="submit" class="w-full py-3.5 rounded-lg gold-gradient-bg text-slate-950 font-bold uppercase tracking-wider text-xs hover:brightness-105 transition shadow-md">
-                        Transmit Application
+                        Submit Application
                     </button>
                 </div>
             </form>
         </div>
     </div>
 
-    <!-- Client Portal Modal -->
-    <div id="portalModal" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+    <!-- Partner Login Modal -->
+    <div id="loginModal" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
         <div class="bg-white rounded-2xl max-w-sm w-full border border-gold-200 p-8 shadow-2xl relative text-center">
-            <button onclick="closePortalModal()" class="absolute top-4 right-4 text-slate-400 hover:text-slate-800 text-lg">✕</button>
-            <div class="w-12 h-12 rounded-full bg-gold-50 border border-gold-300 mx-auto flex items-center justify-center text-gold-600 mb-4">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
+            <button onclick="closeLoginModal()" class="absolute top-4 right-4 text-slate-400 hover:text-slate-800 text-lg">✕</button>
+            <div class="w-12 h-12 rounded-xl bg-gold-50 border border-gold-300 mx-auto flex items-center justify-center text-gold-700 mb-4 font-bold text-xl">
+                AGS
             </div>
-            <h3 class="font-serif text-xl font-bold text-slate-900">Biometric & Hardware Key Required</h3>
-            <p class="text-xs text-slate-500 mt-2 mb-6">Connect your AGS Hardware Security Key (FIDO2 / YubiKey) to authenticate your private session.</p>
-            <button onclick="alert('Hardware security key listener initialized. Please touch your physical key.')" class="w-full py-2.5 rounded-lg border border-slate-300 text-slate-700 font-semibold text-xs hover:bg-slate-50 transition">
-                Detect Security Key
-            </button>
+            <h3 class="text-xl font-bold text-slate-900">AGS Partner Login</h3>
+            <p class="text-xs text-slate-500 mt-1 mb-5">Login with your Registered Mobile / User ID</p>
+
+            <form onsubmit="handleLoginSubmit(event)" class="space-y-3 text-xs text-left">
+                <div>
+                    <label class="block font-semibold text-slate-700 uppercase mb-1">User ID / Mobile</label>
+                    <input type="text" required class="w-full px-3.5 py-2.5 rounded-lg border border-slate-200 focus:border-gold-500 outline-none text-slate-900" placeholder="e.g. AGS889201">
+                </div>
+                <div>
+                    <label class="block font-semibold text-slate-700 uppercase mb-1">Password</label>
+                    <input type="password" required class="w-full px-3.5 py-2.5 rounded-lg border border-slate-200 focus:border-gold-500 outline-none text-slate-900" placeholder="••••••••">
+                </div>
+                <button type="submit" class="w-full py-2.5 rounded-lg gold-gradient-bg text-slate-950 font-bold text-xs uppercase tracking-wider hover:brightness-105 transition mt-2">
+                    Sign In to Portal
+                </button>
+            </form>
         </div>
     </div>
 
     <!-- Toast Notification -->
     <div id="toast" class="fixed bottom-6 right-6 bg-slate-900 text-white px-5 py-3 rounded-xl shadow-2xl border border-gold-400/50 hidden flex items-center gap-3 text-xs z-50">
         <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
-        <span id="toastMsg">Application Transmitted. A Wealth Attaché has been notified.</span>
+        <span id="toastMsg">Application Received. An AGS Corporation executive will call you shortly.</span>
     </div>
 
-    <!-- Interactive Scripts -->
+    <!-- Interactive Scripts for Calculator and Modals -->
     <script>
-        // Modal management
-        function openContactModal() {
-            document.getElementById('contactModal').classList.remove('hidden');
+        function openApplyModal(role) {
+            document.getElementById('applyModal').classList.remove('hidden');
+            if (role) {
+                const select = document.getElementById('roleSelect');
+                for (let i = 0; i < select.options.length; i++) {
+                    if (select.options[i].text.toLowerCase().includes(role.toLowerCase())) {
+                        select.selectedIndex = i;
+                        break;
+                    }
+                }
+            }
         }
-        function closeContactModal() {
-            document.getElementById('contactModal').classList.add('hidden');
+        function closeApplyModal() {
+            document.getElementById('applyModal').classList.add('hidden');
         }
-        function openPortalModal() {
-            document.getElementById('portalModal').classList.remove('hidden');
+        function openLoginModal() {
+            document.getElementById('loginModal').classList.remove('hidden');
         }
-        function closePortalModal() {
-            document.getElementById('portalModal').classList.add('hidden');
+        function closeLoginModal() {
+            document.getElementById('loginModal').classList.add('hidden');
         }
 
-        function handleContactSubmit(e) {
+        function handleApplySubmit(e) {
             e.preventDefault();
-            closeContactModal();
+            closeApplyModal();
+            showToast("Application submitted successfully! Our representative will call you within 2 business hours.");
+        }
+
+        function handleLoginSubmit(e) {
+            e.preventDefault();
+            closeLoginModal();
+            showToast("Redirecting to AGS Corporation Secure Partner Terminal...");
+        }
+
+        function showToast(msg) {
             const toast = document.getElementById('toast');
+            document.getElementById('toastMsg').textContent = msg;
             toast.classList.remove('hidden');
             setTimeout(() => {
                 toast.classList.add('hidden');
             }, 4500);
         }
 
-        // Simulator Logic
-        const capitalSlider = document.getElementById('capitalSlider');
-        const capitalDisplay = document.getElementById('capitalDisplay');
-        const annualYieldDisplay = document.getElementById('annualYieldDisplay');
-        const apyRateDisplay = document.getElementById('apyRateDisplay');
-        const monthlyCashflowDisplay = document.getElementById('monthlyCashflowDisplay');
-        const strategyDisplay = document.getElementById('strategyDisplay');
+        // Calculator Logic
+        const aepsSlider = document.getElementById('aepsSlider');
+        const dmtSlider = document.getElementById('dmtSlider');
+        const bbpsSlider = document.getElementById('bbpsSlider');
+        const travelSlider = document.getElementById('travelSlider');
 
-        let currentAPY = 0.058; // 5.8%
+        const aepsDisplay = document.getElementById('aepsDisplay');
+        const dmtDisplay = document.getElementById('dmtDisplay');
+        const bbpsDisplay = document.getElementById('bbpsDisplay');
+        const travelDisplay = document.getElementById('travelDisplay');
 
-        const strategies = {
-            1: { name: 'Sovereign Prime (5.8% APY)', apy: 0.058 },
-            2: { name: 'Dynamic Treasury (7.4% APY)', apy: 0.074 },
-            3: { name: 'Structured Credit (9.6% APY)', apy: 0.096 }
-        };
+        const monthlyIncomeDisplay = document.getElementById('monthlyIncomeDisplay');
+        const annualIncomeDisplay = document.getElementById('annualIncomeDisplay');
 
-        function setStrategy(id) {
-            document.querySelectorAll('.strategy-btn').forEach(btn => {
-                btn.className = 'strategy-btn py-2.5 px-2 text-xs font-semibold rounded-lg border border-slate-200 bg-white text-slate-600 hover:border-gold-300 transition';
-            });
-            document.getElementById('strat' + id).className = 'strategy-btn py-2.5 px-2 text-xs font-semibold rounded-lg border border-gold-500 bg-gold-50 text-gold-900 transition';
-            currentAPY = strategies[id].apy;
-            strategyDisplay.textContent = strategies[id].name;
-            updateCalculations();
+        function updateCalculator() {
+            const aepsCount = parseInt(aepsSlider.value, 10);
+            const dmtCount = parseInt(dmtSlider.value, 10);
+            const bbpsCount = parseInt(bbpsSlider.value, 10);
+            const travelCount = parseInt(travelSlider.value, 10);
+
+            aepsDisplay.textContent = aepsCount + ' / day';
+            dmtDisplay.textContent = dmtCount + ' / day';
+            bbpsDisplay.textContent = bbpsCount + ' / day';
+            travelDisplay.textContent = travelCount + ' / day';
+
+            // Commission estimations:
+            // AEPS: ~₹10 average per txn
+            // DMT: ~₹18 average per txn
+            // BBPS: ~₹3 average per bill/recharge
+            // Travel/IRCTC: ~₹45 average per ticket
+            const dailyIncome = (aepsCount * 10) + (dmtCount * 18) + (bbpsCount * 3) + (travelCount * 45);
+            const monthlyIncome = dailyIncome * 30;
+            const annualIncome = monthlyIncome * 12;
+
+            monthlyIncomeDisplay.textContent = '₹' + monthlyIncome.toLocaleString('en-IN');
+            annualIncomeDisplay.textContent = '₹' + annualIncome.toLocaleString('en-IN') + ' / yr';
         }
 
-        function updateCalculations() {
-            const capital = parseFloat(capitalSlider.value);
-            capitalDisplay.textContent = '$' + capital.toLocaleString();
-            
-            const annualYield = capital * currentAPY;
-            const monthlyYield = annualYield / 12;
+        aepsSlider.addEventListener('input', updateCalculator);
+        dmtSlider.addEventListener('input', updateCalculator);
+        bbpsSlider.addEventListener('input', updateCalculator);
+        travelSlider.addEventListener('input', updateCalculator);
 
-            annualYieldDisplay.textContent = '$' + Math.round(annualYield).toLocaleString();
-            monthlyCashflowDisplay.textContent = '$' + Math.round(monthlyYield).toLocaleString();
-            apyRateDisplay.textContent = (currentAPY * 100).toFixed(2) + '% APY';
-        }
-
-        capitalSlider.addEventListener('input', updateCalculations);
-        updateCalculations();
+        updateCalculator();
     </script>
 </body>
 </html>
